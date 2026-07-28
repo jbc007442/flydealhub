@@ -1,0 +1,22 @@
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  background: white;
+  z-index: 50;
+  border-radius: 6px;
+}
+
+.react-autosuggest__suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background: #f3f4f6;
+}
+
+
