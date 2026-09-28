@@ -17,6 +17,7 @@ import Book from "./pages/Book";
 import TaxesFees from "./pages/TaxesFees";
 import ServiceFees from "./pages/ServiceFees";
 import Status from "./pages/Status";
+import Reservation from "./pages/Reservation";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/about.html" element={<About />} />
           <Route path="/contact.html" element={<Contact />} />
           <Route path="/airlines-reservation.html" element={<Airlines />} />
+          <Route path="/reservation.html" element={<Reservation/>} />
           <Route path="/privacy-policy.html" element={<Privacy />} />
           <Route path="/terms-conditions.html" element={<TermsConditions />} />
           <Route path="/results.html" element={<Results/>} />
