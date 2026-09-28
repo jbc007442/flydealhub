@@ -119,7 +119,7 @@ const Reservation = () => {
           <section className="py-12">
             <div className="max-w-6xl mx-auto px-6">
               <h2 className="text-2xl font-bold text-blue-700 mb-4">
-                Welcome to Reservations
+                Welcome to Reservation
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
                 The technologies that enable an airline to sell its inventory (seats) are known as airline reservation systems (ARS). Schedules, rates, and a database of reservations (or passenger name records) and tickets issued (if appropriate) are all included. ARSs are a component of passenger service systems (PSS), which are programs that facilitate face-to-face communication with travelers. Eventually, the computer reservations system (CRS) replaced ARS. Reservations for a specific airline are made through a computer reservation system that links with a global distribution system (GDS), which facilitates reservations for the majority of major airlines in a single system for travel agents and other distribution channels.
