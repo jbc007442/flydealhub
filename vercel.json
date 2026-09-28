@@ -1,0 +1,68 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/disclaimer.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/refund-policy.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/child-flight-bookking.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/business-class-flight.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/airlines-reservation.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/reservation.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms-conditions.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/results.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/book",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/taxes.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/status.html",
+      "destination": "/index.html"
+    }
+  ]
+}
