@@ -240,15 +240,15 @@ const About = () => {
                 </div>
 
                 {/* Registered Address */}
-<div className="bg-white rounded-lg p-4 border border-blue-100">
-  <p className="text-sm text-gray-500 mb-1">Registered Address</p>
+                <div className="bg-white rounded-lg p-4 border border-blue-100">
+                  <p className="text-sm text-gray-500 mb-1">Registered Address</p>
 
-  <p className="font-semibold text-gray-800 leading-relaxed">
-    523/5 Khalsa College Rd,
-    <br />
-    Yamunanagar, Haryana, India
-  </p>
-</div>
+                  <p className="font-semibold text-gray-800 leading-relaxed">
+                    523/5 Khalsa College Rd,
+                    <br />
+                    Yamunanagar, Haryana, India
+                  </p>
+                </div>
               </div>
 
               <div className="mt-6 pt-5 border-t border-blue-100">

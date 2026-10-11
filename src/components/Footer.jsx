@@ -92,11 +92,11 @@ const Footer = () => {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/business-class-flight.html" className="hover:text-blue-500 transition">
                 Business Class Flight
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -131,11 +131,11 @@ const Footer = () => {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/child-flight-bookking.html" className="hover:text-blue-500 transition">
                 Child Flight Booking
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
