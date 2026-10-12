@@ -1,329 +1,12 @@
-// import React, {useState} from "react";
-// import SearchBar from "../components/SearchBar"; // ✅ Import SearchBar
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay } from "swiper/modules";
-// import { FiUsers, FiTruck, FiGrid } from "react-icons/fi";
-// import { FaChevronDown, FaPhone, FaPlane, FaSyncAlt, FaUndoAlt, FaUserEdit } from "react-icons/fa";
-// import dubai from "../assets/dubai.jpg";
-// import sing from "../assets/sing.jpg";
-// import paris from "../assets/paris.jpg";
-// import london from "../assets/london.jpg";
-// import monte from "../assets/monte.jpg";
-// import flight from "../assets/flight.webp";
-
-// // Swiper CSS
-// import "swiper/css";
-// import "swiper/css/autoplay";
-
-// const deals = [
-//   {
-//     city: "Dubai",
-//     checks: 320,
-//     trip: "4 Nights Stay",
-//     flight: "Roundtrip Flight",
-//     visit: "City tour included",
-//     image: dubai,
-//   },
-//   {
-//     city: "Singapore",
-//     checks: 210,
-//     trip: "5 Nights Stay",
-//     flight: "Flight Included",
-//     visit: "Theme Parks Visit",
-//     image: sing,
-//   },
-//   {
-//     city: "Paris",
-//     checks: 410,
-//     trip: "3 Nights Stay",
-//     flight: "Return Flight",
-//     visit: "Eiffel Tower Visit",
-//     image: paris,
-//   },
-//   {
-//   city: "Monaco",
-//   checks: 210,
-//   trip: "3 Nights Stay",
-//   flight: "Return Flight",
-//   visit: "Monte Carlo Visit",
-//   image: monte,
-//   },
-//   {
-//     city: "london",
-//     checks: 490,
-//     trip: "5 Nights Stay",
-//     flight: "Return Flight",
-//     visit: "London Eye Visit",
-//     image: london,
-//   },
-// ];
-
-// const faqs = [
-//   {
-//     question: "How does Flydealhub offer the cheapest flights?",
-//     answer:
-//       "Flydealhub compares fares from hundreds of airlines and travel partners in real-time to find you the best deals. We also use intelligent pricing tools to highlight the cheapest travel dates."
-//   },
-//   {
-//     question: "How does Flydealhub keep my transactions secure?",
-//     answer:
-//       "We use 256-bit SSL encryption and secure payment gateways to ensure your transactions and personal data remain fully protected."
-//   },
-//   {
-//     question: "Can I find all the airlines and all the flights I'm looking for on Flydealhub?",
-//     answer:
-//       "Yes! Flydealhub searches flights from international and domestic airlines worldwide to provide a wide range of options."
-//   },
-//   {
-//     question: "How can I book flights on Flydealhub?",
-//     answer:
-//       "Simply enter your travel details, compare flights, choose the best one, and book securely online in a few clicks."
-//   }
-// ];
-
-// const Reservation = () => {
-//    const [openIndex, setOpenIndex] = useState(null);
-
-//     const toggleFAQ = (index) => {
-//       setOpenIndex(openIndex === index ? null : index);
-//     };
-//   return (
-//     <>
-//       {/* ✅ HERO SECTION */}
-//       <section
-//         className="h-[300px] bg-cover bg-center flex items-center justify-center text-white relative"
-//          style={{
-//     backgroundImage: `url(${flight})`,
-//     backgroundSize: "cover",
-//     backgroundPosition: "center",
-//     backgroundRepeat: "no-repeat",
-//   }}
-//       >
-//         <div className="absolute inset-0 bg-black/50"></div>
-//         <div className="relative text-center z-10">
-//           <h1 className="text-4xl md:text-5xl font-bold">Reservations</h1>
-//           <p className="mt-2 text-lg opacity-90">Book flights with trusted airlines worldwide</p>
-//         </div>
-//       </section>
-
-//       {/* ✅ SEARCHBAR SECTION */}
-//       <div className="relative z-20 -mt-10 max-w-6xl mx-auto px-4">
-//         <SearchBar />
-//       </div>
-
-//       {/* ✅ ABOUT AIRLINES INFO */}
-
-//       {/* Main Content */}
-//       <section className=" py-10">
-//         <div className="max-w-6xl mx-auto px-6 leading-relaxed text-gray-700">
-//           <section className="py-12">
-//             <div className="max-w-6xl mx-auto px-6">
-//               <h2 className="text-2xl font-bold text-blue-700 mb-4">
-//                 Welcome to Reservation
-//               </h2>
-//               <p className="text-gray-700 leading-relaxed mb-6">
-//                 The technologies that enable an airline to sell its inventory (seats) are known as airline reservation systems (ARS). Schedules, rates, and a database of reservations (or passenger name records) and tickets issued (if appropriate) are all included. ARSs are a component of passenger service systems (PSS), which are programs that facilitate face-to-face communication with travelers. Eventually, the computer reservations system (CRS) replaced ARS. Reservations for a specific airline are made through a computer reservation system that links with a global distribution system (GDS), which facilitates reservations for the majority of major airlines in a single system for travel agents and other distribution channels.
-//               </p>
-//             </div>
-//           </section>
-
-//           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-//             Airline Reservation Phone Number
-//           </h2>
-//           <p className="mb-6">
-//             You can take the following actions to book an airline reservation over the phone:
-//           </p>
-
-//           <p className="mb-6">
-//             You can take the following actions to book an airline reservation over the phone:
-
-// Visit the airline's official website to make your reservation. Search for their customer care section or contact details. Locate the Telephone Number: Look for a phone number associated with booking, reservations, or customer support once you are on the website. Typically, the "Contact Us" or "Support" pages contain the contact details. Give the airline a call: Wait for a customer support agent to help you by dialing the number you discovered. Have all of your trip information ready, including the destination, dates, number of passengers, and any special needs. Booking Procedure: The customer support agent will walk you through the procedure, offering flight choices and answering any questions you might have. Payment: In order to validate your reservation, you will need to submit payment details. You can try looking online or going to a local travel agency that can assist you with making the reservation over the phone if you can not find the airline's phone number on their website. It is a good idea to ask about any potential fees during the call because certain airlines might charge an extra price for reservations booked over the phone.
-
-// 💡 Tip: Some airlines may charge a small fee for reservations made over the phone, so always confirm during your call.
-//           </p>
-//           <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6">
-//             <p className="font-semibold text-yellow-800 mb-2">💡 Tip:</p>
-//             <p className="text-yellow-700">Some airlines may charge a small fee for reservations made over the phone, so always confirm during your call.</p>
-//           </div>
-
-//           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-//             Flight Booking, Changes, Cancellations & Name Corrections – 24/7 Assistance
-//           </h2>
-//           <p className="mb-6">
-//             Get Instant Help From Certified Travel Agents
-//           </p>
-
-//           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-//             Our Services
-//           </h2>
-//           <ul className="list-none space-y-2 mb-6">
-//             <li className="flex items-center">
-//               <span className="text-green-600 mr-2">✅</span> New Flight Bookings – Domestic & International Routes
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-green-600 mr-2">✅</span> Flight Date & Time Changes
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-green-600 mr-2">✅</span> Name Correction or Passenger Details Update
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-green-600 mr-2">✅</span> Ticket Cancellations & Refund Support
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-green-600 mr-2">✅</span> Seat Upgrade or Special Request Assistance
-//             </li>
-//           </ul>
-//           <p className="mb-6">
-//             We help you find the best available options through trusted airline systems to make your travel smooth and hassle-free.
-//           </p>
-
-//           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-//             Why Choose Us
-//           </h2>
-//           <ul className="list-none space-y-2 mb-6">
-//             <li className="flex items-center">
-//               <span className="text-blue-600 mr-2">🌐</span> 24/7 Customer Support via Phone
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-blue-600 mr-2">⚡</span> Fast and Reliable Booking Assistance
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-blue-600 mr-2">🧾</span> Transparent Policies with No Hidden Fees
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-blue-600 mr-2">👨‍💼</span> Experienced Travel Consultants
-//             </li>
-//             <li className="flex items-center">
-//               <span className="text-blue-600 mr-2">🔒</span> Safe & Secure Payment Channels
-//             </li>
-//           </ul>
-
-//           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-//             How It Works
-//           </h2>
-//           <ol className="list-decimal ml-6 space-y-2 mb-6">
-//             <li className="flex items-start">
-//               <span className="mr-2 mt-1">📞</span> Call Our Support Line – Speak with a trained agent immediately.
-//             </li>
-//             <li className="flex items-start">
-//               <span className="mr-2 mt-1">🧳</span> Share Your Travel Details – Date, destination, and airline preferences.
-//             </li>
-//             <li className="flex items-start">
-//               <span className="mr-2 mt-1">✈️</span> Get Options & Confirm – Receive the best available flight solutions.
-//             </li>
-//             <li className="flex items-start">
-//               <span className="mr-2 mt-1">💳</span> Secure Payment & Confirmation – Get instant confirmation via email or SMS.
-//             </li>
-//           </ol>
-
-//           <p className="mb-6 text-sm text-gray-600 italic">
-//             We are an independent travel service provider and are not directly affiliated with any airline. Our agents assist travelers in managing reservations, changes, and cancellations through authorized airline systems.
-//           </p>
-//         </div>
-//       </section>
-
-//       {/* ✅ CAROUSEL SECTION */}
-//       <section className="py-16 bg-gray-50">
-//         <div className="max-w-7xl mx-auto px-6">
-//           <h2 className="text-3xl font-bold text-blue-700 text-center mb-10">
-//              Popular Airline Deals
-//           </h2>
-
-//           <Swiper
-//             modules={[Autoplay]}
-//             spaceBetween={25}
-//             slidesPerView={3}
-//             autoplay={{ delay: 2000 }}
-//             loop={true}
-//             style={{ padding: "20px" }}
-//             breakpoints={{
-//               320: { slidesPerView: 1 },
-//               768: { slidesPerView: 2 },
-//               1024: { slidesPerView: 3 },
-//             }}
-//           >
-//             {deals.map((d, index) => (
-//               <SwiperSlide key={index}>
-//                 <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-//                   <div
-//                     className="h-44 bg-cover bg-center"
-//                     style={{ backgroundImage: `url(${d.image})` }}
-//                   ></div>
-//                   <div className="p-5">
-//                     <h3 className="text-xl font-bold">{d.city}</h3>
-//                     <p className="flex items-center text-sm text-gray-500 gap-2">
-//                       <FiUsers /> {d.checks} Bookings
-//                     </p>
-//                     <ul className="mt-3 text-gray-700 text-sm space-y-2">
-//                       <li className="flex items-center gap-2">
-//                         <FiTruck /> {d.trip}
-//                       </li>
-//                       <li className="flex items-center gap-2">
-//                         <FaPlane /> {d.flight}
-//                       </li>
-//                       <li className="flex items-center gap-2">
-//                         <FiGrid /> {d.visit}
-//                       </li>
-//                     </ul>
-//                     <button className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-//                       View Deal
-//                     </button>
-//                   </div>
-//                 </div>
-//               </SwiperSlide>
-//             ))}
-//           </Swiper>
-//         </div>
-//       </section>
-
-//       {/* ✅ FAQ SECTION */}
-//              <section className="max-w-7xl mx-auto my-12 px-6">
-//             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-6">
-//               Frequently Asked Questions
-//             </h2>
-
-//             <div className="space-y-4">
-//               {faqs.map((faq, index) => (
-//                 <div
-//                   key={index}
-//                   className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
-//                 >
-//                   <button
-//                     onClick={() => toggleFAQ(index)}
-//                     className="w-full flex justify-between items-center px-5 py-4 bg-white hover:bg-blue-50 transition"
-//                   >
-//                     <span className="text-base sm:text-lg font-medium text-gray-800">
-//                       {faq.question}
-//                     </span>
-//                     <FaChevronDown
-//                       className={`transition-transform ${
-//                         openIndex === index ? "rotate-180 text-blue-600" : "text-gray-500"
-//                       }`}
-//                     />
-//                   </button>
-
-//                   {openIndex === index && (
-//                     <div className="px-5 py-4 bg-blue-50 text-gray-700 text-sm sm:text-base">
-//                       {faq.answer}
-//                     </div>
-//                   )}
-//                 </div>
-//               ))}
-//             </div>
-//           </section>
-//     </>
-//   );
-// };
-
-// export default Reservation;
-
 import React, { useEffect, useState } from 'react';
+
 import SearchBar from '../components/SearchBar';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
 import { FiUsers, FiTruck, FiGrid } from 'react-icons/fi';
+
 import { FaChevronDown, FaPhone, FaPlane, FaSyncAlt, FaUndoAlt, FaUserEdit } from 'react-icons/fa';
 
 import dubai from '../assets/dubai.jpg';
@@ -405,13 +88,16 @@ const faqs = [
 const Reservation = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // Mobile reservation popup
-  const [showReservationPopup, setShowReservationPopup] = useState(false);
+  // =========================================================
+  // MOBILE POPUP STATE
+  // =========================================================
 
-  /*
-   * Automatically open popup on mobile.
-   * Desktop will NOT open the popup.
-   */
+  const [showTravelSupportPopup, setShowTravelSupportPopup] = useState(false);
+
+  // =========================================================
+  // AUTOMATICALLY OPEN POPUP ON MOBILE
+  // =========================================================
+
   useEffect(() => {
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
@@ -457,7 +143,7 @@ const Reservation = () => {
       </section>
 
       {/* =========================================================
-          SEARCH BAR
+          SEARCH BAR SECTION
       ========================================================= */}
 
       <div className="relative z-20 -mt-10 max-w-6xl mx-auto px-4">
@@ -466,7 +152,8 @@ const Reservation = () => {
 
       {/* =========================================================
           MOBILE RESERVATION BUTTON
-          Hidden on desktop
+          Desktop: Hidden
+          Mobile: Visible
       ========================================================= */}
 
       <div className="mt-4 flex justify-center px-4 md:hidden">
@@ -503,86 +190,82 @@ const Reservation = () => {
 
       <section className="py-10">
         <div className="max-w-6xl mx-auto px-6 leading-relaxed text-gray-700">
-          {/* Welcome */}
+          {/* =====================================================
+        WELCOME
+    ===================================================== */}
 
           <section className="py-12">
             <div className="max-w-6xl mx-auto px-6">
-              <h2 className="text-2xl font-bold text-blue-700 mb-4">Welcome to Reservation</h2>
+              <h2 className="text-2xl font-bold text-blue-700 mb-4">
+                Welcome to Airline Travel Support
+              </h2>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                The technologies that enable an airline to sell its inventory (seats) are known as
-                airline reservation systems (ARS). Schedules, rates, and a database of reservations
-                (or passenger name records) and tickets issued (if appropriate) are all included.
-                ARSs are a component of passenger service systems (PSS), which are programs that
-                facilitate face-to-face communication with travelers. Eventually, the computer
-                reservations system (CRS) replaced ARS. Reservations for a specific airline are made
-                through a computer reservation system that links with a global distribution system
-                (GDS), which facilitates reservations for the majority of major airlines in a single
-                system for travel agents and other distribution channels.
+                Airline reservation systems are technologies used by airlines and travel
+                distribution platforms to manage flight inventory, schedules, fares, passenger
+                information, and ticketing services. These systems connect airlines with global
+                distribution systems (GDS) and other travel platforms, allowing travelers and travel
+                professionals to search and compare available flight options efficiently.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Flydealhub provides independent travel assistance to help customers explore
+                available airline options, understand fares, and access useful travel information
+                through trusted airline and distribution systems.
               </p>
             </div>
           </section>
 
-          {/* =========================================================
-              AIRLINE RESERVATION PHONE NUMBER
-          ========================================================= */}
+          {/* =====================================================
+        AIRLINE SUPPORT PHONE NUMBER
+    ===================================================== */}
 
           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-            Airline Reservation Phone Number
+            Airline Support Phone Number
           </h2>
 
           <p className="mb-6">
-            You can take the following actions to book an airline reservation over the phone:
+            Travelers can contact an airline's official support team by using the telephone number
+            listed on the airline's official website.
           </p>
 
           <p className="mb-6">
-            You can take the following actions to book an airline reservation over the phone:
+            Visit the airline's official website and locate its customer support or contact section.
+            Make sure you use the official contact information provided by the airline. When
+            contacting an airline, keep your travel details available, including your destination,
+            travel dates, passenger information, and any special requirements.
           </p>
 
           <p className="mb-6">
-            Visit the airline's official website to make your reservation. Search for their customer
-            care section or contact details. Locate the Telephone Number: Look for a phone number
-            associated with booking, reservations, or customer support once you are on the website.
-            Typically, the "Contact Us" or "Support" pages contain the contact details. Give the
-            airline a call: Wait for a customer support agent to help you by dialing the number you
-            discovered. Have all of your trip information ready, including the destination, dates,
-            number of passengers, and any special needs. Booking Procedure: The customer support
-            agent will walk you through the procedure, offering flight choices and answering any
-            questions you might have. Payment: In order to validate your reservation, you will need
-            to submit payment details. You can try looking online or going to a local travel agency
-            that can assist you with making the reservation over the phone if you can not find the
-            airline's phone number on their website. It is a good idea to ask about any potential
-            fees during the call because certain airlines might charge an extra price for
-            reservations booked over the phone.
-          </p>
-
-          <p className="mb-6">
-            💡 Tip: Some airlines may charge a small fee for reservations made over the phone, so
-            always confirm during your call.
+            Airline representatives can provide information about available flights, fares,
+            schedules, passenger requirements, and applicable airline policies. Any applicable fees
+            should be confirmed directly with the airline before proceeding.
           </p>
 
           <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6">
             <p className="font-semibold text-yellow-800 mb-2">💡 Tip:</p>
 
             <p className="text-yellow-700">
-              Some airlines may charge a small fee for reservations made over the phone, so always
-              confirm during your call.
+              Always verify airline contact information through the airline's official website and
+              confirm applicable fees or policies directly with the airline.
             </p>
           </div>
 
-          {/* =========================================================
-              ASSISTANCE
-          ========================================================= */}
+          {/* =====================================================
+        TRAVEL ASSISTANCE
+    ===================================================== */}
 
           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
-            Flight Booking, Changes, Cancellations & Name Corrections – 24/7 Assistance
+            Flight Travel Assistance – 24/7 Customer Support
           </h2>
 
-          <p className="mb-6">Get Instant Help From Certified Travel Agents</p>
+          <p className="mb-6">
+            Get helpful travel information and assistance from experienced travel professionals.
+          </p>
 
-          {/* =========================================================
-              OUR SERVICES
-          ========================================================= */}
+          {/* =====================================================
+        SERVICES
+    ===================================================== */}
 
           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
             Our Services
@@ -591,38 +274,38 @@ const Reservation = () => {
           <ul className="list-none space-y-2 mb-6">
             <li className="flex items-center">
               <span className="text-green-600 mr-2">✅</span>
-              New Flight Bookings – Domestic & International Routes
+              Domestic & International Flight Options
             </li>
 
             <li className="flex items-center">
               <span className="text-green-600 mr-2">✅</span>
-              Flight Date & Time Changes
+              Flight Schedule & Fare Information
             </li>
 
             <li className="flex items-center">
               <span className="text-green-600 mr-2">✅</span>
-              Name Correction or Passenger Details Update
+              Passenger Information Assistance
             </li>
 
             <li className="flex items-center">
               <span className="text-green-600 mr-2">✅</span>
-              Ticket Cancellations & Refund Support
+              Airline Policy & Refund Information
             </li>
 
             <li className="flex items-center">
               <span className="text-green-600 mr-2">✅</span>
-              Seat Upgrade or Special Request Assistance
+              Seat & Special Travel Requirement Assistance
             </li>
           </ul>
 
           <p className="mb-6">
-            We help you find the best available options through trusted airline systems to make your
-            travel smooth and hassle-free.
+            We help travelers explore available flight options through trusted airline systems and
+            provide useful information to make their travel planning simple and convenient.
           </p>
 
-          {/* =========================================================
-              WHY CHOOSE US
-          ========================================================= */}
+          {/* =====================================================
+        WHY CHOOSE US
+    ===================================================== */}
 
           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
             Why Choose Us
@@ -636,7 +319,7 @@ const Reservation = () => {
 
             <li className="flex items-center">
               <span className="text-blue-600 mr-2">⚡</span>
-              Fast and Reliable Booking Assistance
+              Fast and Reliable Travel Assistance
             </li>
 
             <li className="flex items-center">
@@ -655,9 +338,9 @@ const Reservation = () => {
             </li>
           </ul>
 
-          {/* =========================================================
-              HOW IT WORKS
-          ========================================================= */}
+          {/* =====================================================
+        HOW IT WORKS
+    ===================================================== */}
 
           <h2 className="text-2xl font-semibold mt-6 mb-3 border-l-4 border-blue-600 pl-3">
             How It Works
@@ -666,35 +349,41 @@ const Reservation = () => {
           <ol className="list-decimal ml-6 space-y-2 mb-6">
             <li className="flex items-start">
               <span className="mr-2 mt-1">📞</span>
-              Call Our Support Line – Speak with a trained agent immediately.
+              Contact Our Support Team – Speak with a trained travel professional.
             </li>
 
             <li className="flex items-start">
               <span className="mr-2 mt-1">🧳</span>
-              Share Your Travel Details – Date, destination, and airline preferences.
+              Share Your Travel Details – Destination, dates, passengers, and airline preferences.
             </li>
 
             <li className="flex items-start">
               <span className="mr-2 mt-1">✈️</span>
-              Get Options & Confirm – Receive the best available flight solutions.
+              Explore Available Options – Review suitable flight options and fare information.
             </li>
 
             <li className="flex items-start">
               <span className="mr-2 mt-1">💳</span>
-              Secure Payment & Confirmation – Get instant confirmation via email or SMS.
+              Secure Payment – Use secure payment channels when applicable.
             </li>
           </ol>
 
+          {/* =====================================================
+        DISCLAIMER
+    ===================================================== */}
+
           <p className="mb-6 text-sm text-gray-600 italic">
-            We are an independent travel service provider and are not directly affiliated with any
-            airline. Our agents assist travelers in managing reservations, changes, and
-            cancellations through authorized airline systems.
+            Flydealhub is an independent travel service provider and is not directly affiliated with
+            any airline. We provide general travel information, flight options, fare details, and
+            customer assistance through authorized airline and travel distribution systems. Airline
+            policies, prices, availability, and applicable terms are determined by the respective
+            airlines and may vary.
           </p>
         </div>
       </section>
 
       {/* =========================================================
-          POPULAR AIRLINE DEALS
+          CAROUSEL SECTION
       ========================================================= */}
 
       <section className="py-16 bg-gray-50">
@@ -773,7 +462,7 @@ const Reservation = () => {
       </section>
 
       {/* =========================================================
-          FAQ
+          FAQ SECTION
       ========================================================= */}
 
       <section className="max-w-7xl mx-auto my-12 px-6">
@@ -814,13 +503,16 @@ const Reservation = () => {
       </section>
 
       {/* =========================================================
-    MOBILE RESERVATION POPUP
-    Opens automatically after 1 second on mobile
+    MOBILE TRAVEL SUPPORT POPUP
+    Opens automatically on mobile
 ========================================================= */}
 
-      {showReservationPopup && (
+      {showTravelSupportPopup && (
         <div className="fixed inset-0 z-[99999] flex flex-col bg-slate-50 animate-in fade-in zoom-in-95 duration-300 md:hidden">
-          {/* TOP ALERT */}
+          {/* =====================================================
+        1. TOP ALERT BAR
+    ===================================================== */}
+
           <div className="bg-blue-700 text-white text-[10px] py-1.5 px-4 flex justify-center items-center gap-2 font-bold uppercase tracking-widest">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
@@ -829,57 +521,100 @@ const Reservation = () => {
             High Call Volume: Priority Connection Active
           </div>
 
-          {/* HEADER */}
-          <header className="flex items-center justify-between px-3 py-3 bg-white border-b border-blue-100">
-            <h1 className="text-sm font-black tracking-tight text-blue-600">
-              Trip <span className="text-slate-900">Fly Hub</span>
-            </h1>
+          {/* =====================================================
+        2. HEADER
+    ===================================================== */}
 
+          <header className="flex items-center justify-between px-3 py-3 bg-white border-b border-blue-100">
+            {/* Brand */}
+            <div className="flex items-center">
+              <h1 className="text-sm font-black tracking-tight text-blue-600">
+                Trip <span className="text-slate-900">Fly Hub</span>
+              </h1>
+            </div>
+
+            {/* Phone + Close */}
             <div className="flex items-center gap-2">
               <a
                 href="tel:+18558669425"
-                className="text-xs font-bold px-3 py-2 border border-blue-200 rounded-full text-slate-800 whitespace-nowrap hover:bg-blue-50 transition"
+                className="
+            text-xs
+            font-bold
+            px-3
+            py-2
+            border
+            border-blue-200
+            rounded-full
+            text-slate-800
+            whitespace-nowrap
+            hover:bg-blue-50
+            transition
+          "
               >
                 +1 (855) 866-9425
               </a>
 
               <button
                 type="button"
-                onClick={() => setShowReservationPopup(false)}
-                className="p-2 rounded-full text-slate-400 hover:bg-blue-50 hover:text-blue-600 active:scale-95 transition-all"
-                aria-label="Close reservation popup"
+                onClick={() => setShowTravelSupportPopup(false)}
+                className="
+            p-2
+            rounded-full
+            text-slate-400
+            hover:bg-blue-50
+            hover:text-blue-600
+            active:scale-95
+            transition-all
+          "
+                aria-label="Close travel support popup"
               >
                 <span className="text-xl leading-none">×</span>
               </button>
             </div>
           </header>
 
-          {/* RESERVATIONS STRIP */}
+          {/* =====================================================
+        3. TRAVEL SUPPORT STRIP
+    ===================================================== */}
+
           <div className="bg-blue-600 text-white py-3 text-center font-black text-lg shadow-inner relative overflow-hidden">
             <div className="relative z-10 flex items-center justify-center gap-3 tracking-wide">
-              RESERVATIONS
+              TRAVEL SUPPORT
             </div>
 
+            {/* Shimmer */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-300/40 to-transparent animate-[shimmer_3s_infinite]" />
           </div>
 
-          {/* CONTENT */}
+          {/* =====================================================
+        4. MAIN CONTENT
+    ===================================================== */}
+
           <main className="flex-1 flex flex-col items-center justify-center px-4 py-4 overflow-hidden bg-slate-50">
-            {/* CENTER ICON */}
+            {/* =================================================
+          VISUAL CENTERPIECE
+      ================================================= */}
+
             <div className="relative mb-4">
+              {/* Outer glow */}
               <div className="absolute inset-0 bg-blue-400 rounded-full blur-2xl opacity-30 animate-pulse" />
 
+              {/* Pulse ring */}
               <div className="absolute inset-0 bg-blue-300 rounded-full scale-110 blur-xl opacity-20 animate-ping" />
 
+              {/* Center icon */}
               <div className="relative z-10 w-24 h-24 rounded-full border-4 border-white bg-blue-600 shadow-xl flex items-center justify-center">
                 <FaPhone className="text-white text-4xl animate-pulse" />
               </div>
             </div>
 
-            {/* TITLE */}
+            {/* =================================================
+          TITLE
+      ================================================= */}
+
             <div className="text-center mb-4">
               <h2 className="text-2xl font-black text-slate-900 mb-0.5 tracking-tight">
-                24/7 Reservations Support
+                24/7 Travel Support
               </h2>
 
               <p className="text-slate-500 font-semibold text-sm">
@@ -888,11 +623,19 @@ const Reservation = () => {
               </p>
             </div>
 
-            {/* ACTION BUTTONS */}
+            {/* =================================================
+          ACTION BUTTONS
+      ================================================= */}
+
             <div className="grid grid-cols-2 gap-3 w-full max-w-sm mb-5">
-              {['New Booking', 'Changes', 'Cancellations', 'Customer Service'].map((label) => (
+              {[
+                { label: 'Flight Options' },
+                { label: 'Travel Assistance' },
+                { label: 'Refund Information' },
+                { label: 'Customer Service' },
+              ].map((item) => (
                 <a
-                  key={label}
+                  key={item.label}
                   href="tel:+18558669425"
                   className="
               flex
@@ -910,23 +653,29 @@ const Reservation = () => {
             "
                 >
                   <span className="text-sm font-bold uppercase text-white tracking-tight text-center leading-tight">
-                    {label}
+                    {item.label}
                   </span>
                 </a>
               ))}
             </div>
 
-            {/* SUBTITLE */}
+            {/* =================================================
+          SUB TITLE
+      ================================================= */}
+
             <div className="text-center border-b border-blue-100 pb-1 mb-3">
               <h2 className="text-sm font-bold text-slate-900 tracking-tight">
-                Booking & Changes Over The Phone
+                Flight Options & Travel Assistance Over The Phone
               </h2>
             </div>
 
-            {/* CALL CTA */}
+            {/* =================================================
+          PRIMARY CTA
+      ================================================= */}
+
             <div className="w-full max-w-xs space-y-3">
               <div className="relative group">
-                {/* BLUE GLOW */}
+                {/* Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-700 rounded-xl blur opacity-40 group-hover:opacity-100 animate-pulse transition duration-1000" />
 
                 <a
@@ -950,7 +699,7 @@ const Reservation = () => {
               overflow-hidden
             "
                 >
-                  {/* SHIMMER */}
+                  {/* Shimmer */}
                   <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite]" />
 
                   <FaPhone className="w-6 h-6 animate-bounce" />
@@ -959,11 +708,13 @@ const Reservation = () => {
                 </a>
               </div>
 
-              {/* STATUS */}
+              {/* =================================================
+            STATUS BADGE
+        ================================================= */}
+
               <div className="bg-green-50 py-1.5 px-3 rounded-full border border-green-100 flex items-center justify-center gap-2 mx-auto w-fit">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                 </span>
 
@@ -974,7 +725,10 @@ const Reservation = () => {
             </div>
           </main>
 
-          {/* BOTTOM FOOTER */}
+          {/* =====================================================
+        5. BOTTOM FOOTER
+    ===================================================== */}
+
           <a
             href="tel:+18558669425"
             className="
@@ -1007,7 +761,7 @@ const Reservation = () => {
       )}
 
       {/* =========================================================
-    POPUP ANIMATION
+    POPUP ANIMATIONS
 ========================================================= */}
 
       <style>

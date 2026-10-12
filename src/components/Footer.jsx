@@ -91,12 +91,6 @@ const Footer = () => {
                 Our Services
               </Link>
             </li>
-
-            {/* <li>
-              <Link to="/business-class-flight.html" className="hover:text-blue-500 transition">
-                Business Class Flight
-              </Link>
-            </li> */}
           </ul>
         </div>
 
@@ -130,12 +124,6 @@ const Footer = () => {
                 Disclaimer
               </Link>
             </li>
-
-            {/* <li>
-              <Link to="/child-flight-bookking.html" className="hover:text-blue-500 transition">
-                Child Flight Booking
-              </Link>
-            </li> */}
           </ul>
         </div>
 
@@ -206,8 +194,8 @@ const Footer = () => {
               any airline.
             </span>{' '}
             All prices quoted through us include applicable taxes and fees. Flydealhub provides
-            assistance with flight bookings, changes, cancellations, and other travel-related
-            services for customers who need independent travel support.
+            independent travel assistance and support for customers seeking reliable travel-related
+            services and information.
             <Link
               to="/disclaimer.html"
               className="underline text-blue-500 hover:text-blue-400 ml-1"

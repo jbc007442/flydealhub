@@ -17,6 +17,7 @@ const ServiceFees = () => {
                 <th className="px-4 py-2 text-left">Amount</th>
               </tr>
             </thead>
+
             <tbody className="bg-white text-black">
               <tr className="border-t border-gray-300">
                 <td className="px-4 py-3 font-semibold">
@@ -27,6 +28,7 @@ const ServiceFees = () => {
                 <td className="px-4 py-3">Fees ◊</td>
                 <td className="px-4 py-3">Up to $50</td>
               </tr>
+
               <tr className="border-t border-gray-300">
                 <td className="px-4 py-3 font-semibold">
                   Hotel Transaction Service Fees <br />
@@ -36,6 +38,7 @@ const ServiceFees = () => {
                 <td className="px-4 py-3">Fees ◊</td>
                 <td className="px-4 py-3">Up to $35</td>
               </tr>
+
               <tr className="border-t border-gray-300">
                 <td className="px-4 py-3 font-semibold">
                   Car Rental Transaction Fees <br />
@@ -45,9 +48,10 @@ const ServiceFees = () => {
                 <td className="px-4 py-3">Fees ◊</td>
                 <td className="px-4 py-3">Up to $40</td>
               </tr>
+
               <tr className="border-t border-gray-300">
                 <td className="px-4 py-3 font-semibold">
-                  Cruise Booking Transaction Fees <br />
+                  Cruise Transaction Fees <br />
                   <span className="text-xs text-gray-600">(per passenger)</span>
                 </td>
                 <td className="px-4 py-3">All Cruises</td>
@@ -60,30 +64,47 @@ const ServiceFees = () => {
 
         {/* Notes */}
         <div className="mt-8 space-y-4 text-sm md:text-base text-gray-800">
+          <p>Service fees will be converted to your local currency on the payment page.</p>
+
           <p>
-            Service fees will be converted to your local currency on the payment page.
+            <strong>*Passenger types:</strong> adult, infant, student, child, senior, and military.
+            Transaction fees are usually non-refundable and subject to applicable policy terms.
+            Within 24 hours of making a purchase, eligible refund requests may qualify for
+            refundable transaction service fees. The transaction service charge is not refundable if
+            the refund request is made more than 24 hours after the purchase was completed.
           </p>
-          <p>
-            <strong>*Passenger types:</strong> adult, infant, student, child, senior, and military. Transaction fees are usually non-refundable and subject to change without notice. Within 24 hours of making the reservation, cancellations are subject to refundable transaction service fees. The transaction service charge is not refundable if the cancellation is made more than 24 hours after the reservation was made.
-          </p>
+
           <p className="font-bold text-black">
             Only the final total amount indicated will be charged to your account.
           </p>
+
           <ul className="list-disc pl-5 space-y-1">
-            <li>Holiday package booking service fees may go up to $50 per passenger</li>
-            <li>Up to $200 in service fees per passenger when purchasing first and business class tickets</li>
-            <li>Up to $100 per passenger in service fees for open-jaw and multi-city reservations</li>
+            <li>Holiday package service fees may go up to $50 per passenger</li>
+            <li>
+              Up to $200 in service fees per passenger when purchasing first and business class
+              tickets
+            </li>
+            <li>Up to $100 per passenger in service fees for open-jaw and multi-city travel</li>
             <li>Up to $40 in service fees per passenger in cities with high fraud rates</li>
-            <li>Up to $55 in service fees per passenger for different dates and nearby airports</li>
+            <li>
+              Up to $55 in service fees per passenger for different travel dates and nearby airports
+            </li>
             <li>Service fees for unaccompanied minor tickets may go up to $100 per passenger</li>
-            <li>Service fees of up to $200 per passenger when booking a cruise</li>
+            <li>Service fees of up to $200 per passenger when purchasing a cruise</li>
           </ul>
+
           <p>
-            Service fees for bookings made at contact centers: Reservations made at contact centers may have greater service fees than reservations made online. This covers intricate international and multi-stop itineraries. A service fee of $15 to $250 (or up to $125 for senior citizens) may be levied on each passenger.
+            Service fees for purchases made through contact centers: Requests handled by contact
+            centers may have greater service fees than requests completed online. This covers
+            intricate international and multi-stop itineraries. A service fee of $15 to $250 (or up
+            to $125 for senior citizens) may be levied on each passenger.
           </p>
 
           <p className="text-sm md:text-base text-red-700 font-bold border-t pt-4">
-            IMPORTANT INFORMATION: ALL LISTED SERVICE FEES ARE SUBJECT TO CHANGE AT ANY TIME AND WITHOUT NOTICE. YOU WILL PAY THE END TOTAL PRICE AS QUOTED, REGARDLESS OF ANY CHANGES OR VARIATIONS IN THE SERVICE FEES. BEFORE MAKING A RESERVATION, PLEASE READ THE FINAL PRICE CAREFULLY.
+            IMPORTANT INFORMATION: ALL LISTED SERVICE FEES ARE SUBJECT TO POLICY UPDATES AT ANY TIME
+            AND WITHOUT NOTICE. YOU WILL PAY THE FINAL TOTAL PRICE AS QUOTED, REGARDLESS OF ANY
+            VARIATIONS IN THE SERVICE FEES. BEFORE COMPLETING A PURCHASE, PLEASE REVIEW THE FINAL
+            PRICE CAREFULLY.
           </p>
         </div>
       </div>

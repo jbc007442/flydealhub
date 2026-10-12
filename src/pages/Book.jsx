@@ -418,7 +418,6 @@ const handleSubmit = async (e) => {
 
       {/* Bullet Benefits */}
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-2 text-sm text-gray-800">
-        <li className="flex items-center gap-2">✅ Trip cancellation</li>
         <li className="flex items-center gap-2">✅ Baggage delay</li>
         <li className="flex items-center gap-2">✅ Bad weather</li>
         <li className="flex items-center gap-2">✅ Mechanical issues</li>
@@ -429,7 +428,7 @@ const handleSubmit = async (e) => {
 
       {/* Disclaimer */}
       <p className="text-[11px] mt-4 text-gray-500 leading-relaxed">
-        * Includes coverage for delays, cancellations, emergencies, and more. Terms & conditions apply.
+        * Includes coverage for delays, emergencies, and more. Terms & conditions apply.
       </p>
     </div>
 

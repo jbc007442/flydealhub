@@ -1,11 +1,15 @@
 import React from 'react';
 import { FaTags, FaSyncAlt, FaSmileBeam, FaHeadset, FaPlane, FaCheckCircle } from 'react-icons/fa';
+
 import b from '../assets/business.webp';
 
 const Business = () => {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* =========================================================
+          HERO SECTION
+      ========================================================= */}
+
       <section
         className="relative min-h-[430px] bg-cover bg-center flex items-center justify-center"
         style={{
@@ -24,9 +28,7 @@ const Business = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Business Class Flight Booking
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">Business Class Flights</h1>
 
           <p className="text-xl md:text-2xl mt-4 text-gray-200 font-light">
             Travel in Comfort. Arrive Refreshed. Travel Better.
@@ -40,7 +42,7 @@ const Business = () => {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="/reservation.html"
+              href="/flights.html"
               className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-semibold transition"
             >
               Search Business Class Flights
@@ -56,7 +58,10 @@ const Business = () => {
         </div>
       </section>
 
-      {/* Feature Cards */}
+      {/* =========================================================
+          FEATURE CARDS
+      ========================================================= */}
+
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
           <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
@@ -74,6 +79,7 @@ const Business = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {/* Competitive Fares */}
           <div className="bg-white p-7 shadow-md hover:shadow-xl transition rounded-2xl text-center border border-gray-100 hover:-translate-y-1">
             <FaTags className="text-blue-600 text-4xl mx-auto mb-5" />
 
@@ -85,17 +91,18 @@ const Business = () => {
             </p>
           </div>
 
+          {/* Flexible Options */}
           <div className="bg-white p-7 shadow-md hover:shadow-xl transition rounded-2xl text-center border border-gray-100 hover:-translate-y-1">
             <FaSyncAlt className="text-blue-600 text-4xl mx-auto mb-5" />
 
             <h3 className="text-xl font-semibold text-gray-900">Flexible Options</h3>
 
             <p className="text-gray-600 mt-3 leading-relaxed">
-              Find fare options with flexible change and cancellation conditions, subject to airline
-              rules.
+              Find fare options with flexible travel policies and airline-specific conditions.
             </p>
           </div>
 
+          {/* Premium Experience */}
           <div className="bg-white p-7 shadow-md hover:shadow-xl transition rounded-2xl text-center border border-gray-100 hover:-translate-y-1">
             <FaSmileBeam className="text-blue-600 text-4xl mx-auto mb-5" />
 
@@ -107,20 +114,24 @@ const Business = () => {
             </p>
           </div>
 
+          {/* Travel Assistance */}
           <div className="bg-white p-7 shadow-md hover:shadow-xl transition rounded-2xl text-center border border-gray-100 hover:-translate-y-1">
             <FaHeadset className="text-blue-600 text-4xl mx-auto mb-5" />
 
             <h3 className="text-xl font-semibold text-gray-900">Travel Assistance</h3>
 
             <p className="text-gray-600 mt-3 leading-relaxed">
-              Get assistance with flight options, booking details, changes, and other travel-related
-              requirements.
+              Get assistance with flight options, travel details, schedule support, and other
+              travel-related requirements.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* =========================================================
+          INTRODUCTION
+      ========================================================= */}
+
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -142,7 +153,9 @@ const Business = () => {
           </div>
 
           {/* Benefits */}
+
           <div className="mt-14 grid md:grid-cols-2 gap-8">
+            {/* Comfort */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Comfort & Personal Space
@@ -155,6 +168,7 @@ const Business = () => {
               </p>
             </div>
 
+            {/* Airport Services */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Priority Airport Services
@@ -167,6 +181,7 @@ const Business = () => {
               </p>
             </div>
 
+            {/* Lounge */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Airport Lounge Access</h3>
 
@@ -177,6 +192,7 @@ const Business = () => {
               </p>
             </div>
 
+            {/* Dining */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Premium Dining & Entertainment
@@ -189,6 +205,7 @@ const Business = () => {
               </p>
             </div>
 
+            {/* Connectivity */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Stay Connected & Productive
@@ -201,29 +218,33 @@ const Business = () => {
               </p>
             </div>
 
+            {/* Baggage */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Extra Baggage Allowance</h3>
 
               <p className="text-gray-600 leading-relaxed">
                 Business class fares often include a higher baggage allowance than economy fares.
                 Exact allowances vary by airline, route, and fare type, so always check the
-                conditions before booking.
+                applicable conditions before travel.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Booking Guide */}
+      {/* =========================================================
+          FLIGHT GUIDE
+      ========================================================= */}
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
-              Smart Booking
+              Smart Travel
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-              Tips for Booking Business Class Flights
+              Tips for Business Class Flights
             </h2>
 
             <p className="text-gray-600 mt-4 leading-relaxed">
@@ -233,6 +254,7 @@ const Business = () => {
           </div>
 
           <div className="mt-12 space-y-6">
+            {/* Tip 1 */}
             <div className="flex gap-5 items-start">
               <FaCheckCircle className="text-blue-600 text-2xl mt-1 shrink-0" />
 
@@ -248,12 +270,13 @@ const Business = () => {
               </div>
             </div>
 
+            {/* Tip 2 */}
             <div className="flex gap-5 items-start">
               <FaCheckCircle className="text-blue-600 text-2xl mt-1 shrink-0" />
 
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">
-                  Book According to Your Travel Needs
+                  Choose According to Your Travel Needs
                 </h3>
 
                 <p className="text-gray-600 mt-2 leading-relaxed">
@@ -263,6 +286,7 @@ const Business = () => {
               </div>
             </div>
 
+            {/* Tip 3 */}
             <div className="flex gap-5 items-start">
               <FaCheckCircle className="text-blue-600 text-2xl mt-1 shrink-0" />
 
@@ -271,12 +295,13 @@ const Business = () => {
 
                 <p className="text-gray-600 mt-2 leading-relaxed">
                   Business class does not always mean fully flexible travel. Review the fare
-                  conditions for changes, cancellations, refunds, baggage, and seat selection before
-                  completing your booking.
+                  conditions for refunds, baggage, seat selection, and applicable airline policies
+                  before completing your purchase.
                 </p>
               </div>
             </div>
 
+            {/* Tip 4 */}
             <div className="flex gap-5 items-start">
               <FaCheckCircle className="text-blue-600 text-2xl mt-1 shrink-0" />
 
@@ -293,6 +318,7 @@ const Business = () => {
               </div>
             </div>
 
+            {/* Tip 5 */}
             <div className="flex gap-5 items-start">
               <FaCheckCircle className="text-blue-600 text-2xl mt-1 shrink-0" />
 
@@ -309,7 +335,10 @@ const Business = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* =========================================================
+          CTA SECTION
+      ========================================================= */}
+
       <section className="bg-gradient-to-r from-blue-700 to-blue-900 py-16">
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Upgrade Your Journey?</h2>
@@ -321,10 +350,10 @@ const Business = () => {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="/reservation.html"
+              href="/flights.html"
               className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition"
             >
-              Book Business Class
+              Explore Business Class Flights
             </a>
 
             <a
