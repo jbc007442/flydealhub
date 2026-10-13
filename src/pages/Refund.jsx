@@ -27,7 +27,7 @@ const Refund = () => {
 
           <p className="mb-4">
             For assistance regarding a flight already purchased through Flydealhub, contact our
-            customer service department at +1-800-786-4028.
+            customer service department at (888) 789-8629.
           </p>
 
           <p className="mb-4">
@@ -71,7 +71,7 @@ const Refund = () => {
           <h4 className="text-lg font-semibold mt-4 mb-2">2. Hotel Refunds</h4>
 
           <p className="mb-4">
-            You may contact our customer service department at +1-800-786-4028 or contact the hotel
+            You may contact our customer service department at (888) 789-8629 or contact the hotel
             directly. If you need more information, please review the applicable hotel travel terms.
           </p>
 
@@ -108,7 +108,7 @@ const Refund = () => {
           <h4 className="text-lg font-semibold mt-4 mb-2">3. Rental Car Refunds</h4>
 
           <p className="mb-4">
-            You may contact Flydealhub customer service at +1-800-786-4028, or contact the rental
+            You may contact Flydealhub customer service at (888) 789-8629, or contact the rental
             car company directly. When requesting a refund for a rental car, keep the following
             points in mind:
           </p>
@@ -160,7 +160,7 @@ const Refund = () => {
 
           <p className="mb-4">
             For assistance with a vacation package, contact the customer service department directly
-            at +1-800-786-4028. For individual parts of your vacation package, please review the
+            at (888) 789-8629. For individual parts of your vacation package, please review the
             applicable sections above.
           </p>
 
