@@ -1,9 +1,9 @@
 import React from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import { FiUsers, FiTruck, FiGrid } from 'react-icons/fi';
+import { FiUsers, FiTruck, FiGrid, FiShield, FiArrowRight } from 'react-icons/fi';
+
 import { FaPlane } from 'react-icons/fa';
 
 import manilla from '../assets/manilla.jpg';
@@ -13,11 +13,13 @@ import italy from '../assets/italy.jpg';
 import mexico from '../assets/mexico.jpg';
 import about from '../assets/about.jpeg';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-// Dummy deals data
+// =========================================================
+// HOLIDAY DEALS DATA
+// =========================================================
+
 const deals = [
   {
     city: 'Manila',
@@ -67,6 +69,7 @@ const About = () => {
       {/* =========================================================
           HERO SECTION
       ========================================================= */}
+
       <section
         className="h-[300px] bg-cover bg-center flex items-center justify-center text-white relative"
         style={{
@@ -78,7 +81,7 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative text-center z-10">
+        <div className="relative text-center z-10 px-4">
           <h1 className="text-4xl md:text-5xl font-bold">About Flydealhub</h1>
 
           <p className="mt-2 text-lg text-gray-200">Your trusted partner in travel services</p>
@@ -86,200 +89,280 @@ const About = () => {
       </section>
 
       {/* =========================================================
-          ABOUT SECTION
+          ABOUT CONTENT
       ========================================================= */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-6">
-            About Us
-          </h2>
 
-          <div className="bg-white p-8 space-y-6 shadow-sm rounded-xl">
-            <p className="text-gray-700 leading-relaxed">
-              Welcome to <strong>Flydealhub</strong>, where our passion for travel meets our
-              commitment to providing unforgettable experiences for wanderers like you. As part of a
-              robust umbrella of <strong>Air Fare Bookers Pvt Ltd</strong> dedicated to enhancing
-              your journey, we thrive on the belief that travel is not merely a destination but a
-              transformative experience that fosters connection, understanding, and adventure. We
-              are a travel corporation that places our clients’ desires and necessities as our
-              top-maximum precedence. We can fulfill all your travel goals and wishes with no
-              problem. We’re a travel planning and booking platform that offers you elegance-apart
-              travel services at the maximum less expensive expenses.
-            </p>
-
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-7">
             {/* =====================================================
-                OUR MISSION
+                MAIN CONTENT CARD
             ===================================================== */}
-            <h3 className="text-2xl font-semibold text-blue-700">About Our Mission</h3>
 
-            <p className="text-gray-700 leading-relaxed">
-              Our goal at Traveldealpro is straightforward: to inspire and enable exceptional travel
-              experiences for all travelers, irrespective of their preferences, budget, or mode of
-              travel. We design customized trips that suit your interests, whether you’re looking
-              for calm retreats, exhilarating experiences, cultural exchanges, or family-friendly
-              vacations. Keeping you happy is our first goal, and we’re committed to making travel
-              planning easy and fun.
-            </p>
-
-            {/* =====================================================
-                OUR EXPERTISE
-            ===================================================== */}
-            <h3 className="text-2xl font-semibold text-blue-700">Our Expertise</h3>
-
-            <p className="text-gray-700 leading-relaxed">
-              Our knowledgeable staff members have extensive international knowledge and years of
-              experience in the industry. Being avid tourists themselves, our travel advisors are
-              knowledgeable about the newest trends, best-kept secrets, and must-see sights in
-              locations across the globe. We make use of our solid connections with regional
-              suppliers to guarantee a genuine, secure, and enriching trip.
-            </p>
-
-            {/* =====================================================
-                WHY CHOOSE US
-            ===================================================== */}
-            <h3 className="text-2xl font-semibold text-blue-700">Why Choose Us?</h3>
-
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>
-                <strong>Personalized Service:</strong> We acknowledge that every traveler is unique.
-                Your needs, preferences, and dreams are carefully considered by our highly qualified
-                travel advisors. In order to ensure that every detail is taken care of, we create
-                customized itineraries that mirror your vision.
-              </li>
-
-              <li>
-                <strong>Extensive Package Options:</strong> A variety of interests and price ranges
-                are covered by our extensive portfolio of travel packages. We provide experiences to
-                fit every taste and preference, from opulent getaways to low-cost outings.
-              </li>
-
-              <li>
-                <strong>Local Knowledge:</strong> Our affiliate partners and local tour guides offer
-                priceless insights into every location, highlighting the local way of life and
-                undiscovered gems that more conventional travel routes might overlook. You will
-                travel like a local, not just a tourist, when you work with us.
-              </li>
-
-              <li>
-                <strong>Sustainable Travel Initiatives:</strong> We support ethical travel methods
-                that preserve the local cultures and environments. By providing environmentally
-                friendly options and aiding local communities, we encourage sustainability. You help
-                bring about a positive change when you travel with us.
-              </li>
-
-              <li>
-                <strong>Superb Assistance:</strong> Our dedication to you doesn’t stop when you make
-                your travel arrangements. From pre-departure to the trip home, our committed support
-                staff is on hand 24/7 to make sure you have help at every turn.
-              </li>
-            </ul>
-
-            {/* =====================================================
-                OUR VALUES
-            ===================================================== */}
-            <h3 className="text-2xl font-semibold text-blue-700">Our Values</h3>
-
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>
-                <strong>Integrity:</strong> We pledge to be open and honest in all of our
-                interactions and decisions, providing you with comfort at every turn.
-              </li>
-
-              <li>
-                <strong>Connection:</strong> We strive to establish genuine connections that promote
-                respect and understanding between tourists and people from different cultural
-                backgrounds.
-              </li>
-
-              <li>
-                <strong>Innovation:</strong> We work hard to stay ahead of the curve and
-                continuously offer novel and thrilling experiences because the travel industry is
-                always changing.
-              </li>
-
-              <li>
-                <strong>Community:</strong> We actively work to support local businesses, charitable
-                causes, and conservation initiatives in the communities we serve.
-              </li>
-            </ul>
-
-            {/* =====================================================
-                COMPANY & REGISTRATION DETAILS
-            ===================================================== */}
-            <section className="bg-blue-50 border border-blue-100 rounded-xl p-6 md:p-8 mt-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
-                  <FaPlane className="text-lg" />
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-10">
+              {/* INFORMATION NOTICE */}
+              <div className="flex items-start gap-4 bg-blue-50 border border-blue-100 rounded-xl p-5 mb-9">
+                <div className="flex-shrink-0 mt-0.5">
+                  <FiShield className="text-xl text-blue-600" />
                 </div>
 
-                <h3 className="text-2xl font-semibold text-blue-700">
-                  Company & Registration Details
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Company Name */}
-                <div className="bg-white rounded-lg p-4 border border-blue-100">
-                  <p className="text-sm text-gray-500 mb-1">Company Name</p>
-
-                  <p className="font-semibold text-gray-800">Air Fare Bookers Pvt Ltd</p>
-                </div>
-
-                {/* IATA Number */}
-                <div className="bg-white rounded-lg p-4 border border-blue-100">
-                  <p className="text-sm text-gray-500 mb-1">IATA Number</p>
-
-                  <p className="font-semibold text-gray-800">14003765</p>
-                </div>
-
-                {/* Registration Number */}
-                <div className="bg-white rounded-lg p-4 border border-blue-100">
-                  <p className="text-sm text-gray-500 mb-1">Company Registration Number</p>
-
-                  <p className="font-semibold text-gray-800">U63000HR2022PTC100934</p>
-                </div>
-
-                {/* Registered Address */}
-                <div className="bg-white rounded-lg p-4 border border-blue-100">
-                  <p className="text-sm text-gray-500 mb-1">Registered Address</p>
-
-                  <p className="font-semibold text-gray-800 leading-relaxed">
-                    523/5 Khalsa College Rd,
-                    <br />
-                    Yamunanagar, Haryana, India
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-5 border-t border-blue-100">
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  The above information is provided for business identification and transparency
-                  purposes.
+                <p className="text-sm md:text-base text-gray-700 leading-6">
+                  Please review this information carefully to understand Flydealhub, our services,
+                  and the company operating this website.
                 </p>
               </div>
-            </section>
+
+              {/* =====================================================
+                  WHO WE ARE
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Who we are</h2>
+
+                <p className="text-gray-700 leading-7">
+                  Welcome to <strong>Flydealhub</strong>, a travel-focused website designed to help
+                  visitors explore travel-related information, destinations, and available travel
+                  options.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Our goal is to make travel information easier to find and understand while helping
+                  visitors make informed decisions when planning their journeys.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Flydealhub operates under <strong>Air Fare Bookers Pvt Ltd</strong>, a company
+                  focused on providing travel-related services and solutions.
+                </p>
+              </section>
+
+              {/* =====================================================
+                  WHAT WE DO
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What we do</h2>
+
+                <p className="text-gray-700 leading-7">
+                  Flydealhub provides travel-related information and resources that may assist
+                  visitors with planning their journeys.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Depending on the services currently available on the website, visitors may find
+                  information relating to flights, hotels, destinations, travel packages, and other
+                  travel-related services.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Availability, pricing, schedules, fees, and provider policies may vary. Visitors
+                  should review the applicable information before making a travel decision.
+                </p>
+              </section>
+
+              {/* =====================================================
+                  OUR MISSION
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our mission</h2>
+
+                <p className="text-gray-700 leading-7">
+                  Our mission is to make travel planning simpler, more accessible, and more
+                  convenient by presenting useful travel information in a clear and
+                  easy-to-understand way.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  We aim to help travelers discover destinations, explore available options, and
+                  better understand the information relevant to their travel plans.
+                </p>
+              </section>
+
+              {/* =====================================================
+                  INDEPENDENT WEBSITE
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Independent website
+                </h2>
+
+                <p className="text-gray-700 leading-7">
+                  Flydealhub is presented as an independent travel website. Airline names, hotel
+                  names, logos, trademarks, and other third-party references belong to their
+                  respective owners.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  References to third-party companies or brands are provided for identification or
+                  informational purposes and do not, by themselves, imply a partnership,
+                  sponsorship, authorization, or endorsement.
+                </p>
+              </section>
+
+              {/* =====================================================
+                  ACCURATE INFORMATION
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Accurate information matters
+                </h2>
+
+                <p className="text-gray-700 leading-7">
+                  We aim to keep the information published on Flydealhub clear and useful. However,
+                  travel information can change frequently.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Flight schedules, prices, availability, fees, travel requirements, hotel
+                  information, and provider policies may change without notice.
+                </p>
+
+                <p className="mt-4 text-gray-700 leading-7">
+                  Visitors should verify important information with the relevant airline, hotel,
+                  travel provider, or official authority before making a final decision.
+                </p>
+              </section>
+
+              {/* =====================================================
+                  WHY CHOOSE US
+              ===================================================== */}
+
+              <section className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Why choose Flydealhub?
+                </h2>
+
+                <div className="space-y-5">
+                  <div>
+                    <h3 className="font-bold text-gray-900">Clear information</h3>
+
+                    <p className="mt-1 text-gray-700 leading-7">
+                      We aim to present travel-related information in a simple and understandable
+                      way.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900">Convenient travel planning</h3>
+
+                    <p className="mt-1 text-gray-700 leading-7">
+                      Our website is designed to make discovering travel options and planning
+                      journeys more convenient.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900">Transparent communication</h3>
+
+                    <p className="mt-1 text-gray-700 leading-7">
+                      We believe visitors should have access to clear information about our website
+                      and the business operating it.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* =====================================================
+                  CONTACT US
+              ===================================================== */}
+
+              <section>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Contact us</h2>
+
+                <p className="text-gray-700 leading-7">
+                  For questions about Flydealhub, our website, or the services and information
+                  available through the website, please use the contact details provided on our
+                  Contact Us page.
+                </p>
+
+                <a
+                  href="/contact.html"
+                  className="inline-flex items-center gap-2 mt-5 text-blue-600 font-semibold hover:text-blue-700 transition"
+                >
+                  Contact Flydealhub
+                  <FiArrowRight />
+                </a>
+              </section>
+            </div>
 
             {/* =====================================================
-                EMBARK ON OUR ADVENTURE
+                RIGHT SIDEBAR
             ===================================================== */}
-            <h3 className="text-2xl font-semibold text-blue-700">Embark on Our Adventure</h3>
 
-            <p className="text-gray-700 leading-relaxed">
-              Flydealhub can help you realize your travel goals, whether you’re organizing a
-              romantic retreat, a family vacation, or a solo trip. Come explore the world from a
-              different perspective and join our community of travelers who value genuine
-              experiences.
-            </p>
+            <aside className="space-y-5">
+              {/* Website Information */}
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+                <h2 className="text-xl font-bold text-gray-900">Website information</h2>
 
-            <p className="text-gray-700 leading-relaxed">
-              Join us as we explore, dream, and discover. We are eager to assist you in determining
-              the path of your upcoming journey!
-            </p>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Find information about Flydealhub, website policies, refunds, terms, privacy, and
+                  ways to contact our team.
+                </p>
 
-            <p className="text-gray-700 leading-relaxed">
-              At Flydealhub, we make lifelong memories rather than just organizing vacations. Join
-              us as we explore the world!
-            </p>
+                <div className="mt-5 space-y-1">
+                  <a
+                    href="/about-us"
+                    className="flex items-center justify-between px-3 py-3 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    <span>About Us</span>
+                    <FiArrowRight className="text-gray-400" />
+                  </a>
+
+                  <a
+                    href="/privacy-policy"
+                    className="flex items-center justify-between px-3 py-3 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    <span>Privacy Policy</span>
+                    <FiArrowRight className="text-gray-400" />
+                  </a>
+
+                  <a
+                    href="/terms-and-conditions"
+                    className="flex items-center justify-between px-3 py-3 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    <span>Terms & Conditions</span>
+                    <FiArrowRight className="text-gray-400" />
+                  </a>
+
+                  <a
+                    href="/refund-policy"
+                    className="flex items-center justify-between px-3 py-3 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    <span>Refund Policy</span>
+                    <FiArrowRight className="text-gray-400" />
+                  </a>
+
+                  <a
+                    href="/contact-us"
+                    className="flex items-center justify-between px-3 py-3 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                  >
+                    <span>Contact Us</span>
+                    <FiArrowRight className="text-gray-400" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Need Help */}
+              <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+                <h2 className="text-xl font-bold text-gray-900">Need help?</h2>
+
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Have a question about Flydealhub or the information available on our website?
+                  Contact our team for assistance.
+                </p>
+
+                <a
+                  href="/contact-us"
+                  className="inline-flex items-center gap-2 mt-5 text-sm font-bold text-blue-600 hover:text-blue-700"
+                >
+                  Contact Flydealhub
+                  <FiArrowRight />
+                </a>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -287,6 +370,7 @@ const About = () => {
       {/* =========================================================
           HOLIDAY DEALS CAROUSEL
       ========================================================= */}
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-blue-700 text-center mb-10">Best Holiday Deals</h2>
@@ -295,7 +379,10 @@ const About = () => {
             modules={[Autoplay]}
             spaceBetween={25}
             slidesPerView={3}
-            autoplay={{ delay: 2500 }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             style={{ padding: '20px' }}
             loop={true}
             breakpoints={{
@@ -312,7 +399,7 @@ const About = () => {
           >
             {deals.map((d, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all cursor-pointer overflow-hidden">
+                <div className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all cursor-pointer overflow-hidden border border-gray-100">
                   {/* Image */}
                   <div
                     className="h-44 bg-cover bg-center"
@@ -330,7 +417,7 @@ const About = () => {
                       {d.checks} Check Ins
                     </p>
 
-                    <ul className="mt-3 text-sm text-gray-600 space-y-1">
+                    <ul className="mt-3 text-sm text-gray-600 space-y-2">
                       <li className="flex gap-2 items-center">
                         <FiTruck />
                         {d.trip}

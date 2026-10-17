@@ -1,379 +1,284 @@
 import React from 'react';
+import { FiArrowLeft, FiInfo, FiMail, FiShield } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
+const SectionTitle = ({ number, title }) => (
+  <div className="flex items-start gap-4 mb-4">
+    <span className="flex-shrink-0 text-sm font-semibold text-blue-600">{number}</span>
+
+    <h2 className="text-xl md:text-2xl font-semibold text-slate-900">{title}</h2>
+  </div>
+);
 
 const Privacy = () => {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-gray-400 py-16 text-white text-center shadow-md">
-        <h1 className="text-4xl font-bold">Privacy Policy</h1>
+    <main className="min-h-screen bg-white text-slate-800">
+      {/* Hero */}
+      <section className="border-b border-slate-200 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-blue-600 transition-colors mb-8"
+          >
+            <FiArrowLeft />
+            Back to Home
+          </Link>
 
-        <div className="w-24 h-1 bg-white mx-auto mt-3"></div>
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <FiShield size={20} />
+              </div>
 
-        <p className="mt-4 text-lg opacity-90">
-          Your privacy is important to us. Read how we protect your data.
-        </p>
+              <span className="text-sm font-medium text-blue-600">Flydealhub Policies</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-950">
+              Privacy Policy
+            </h1>
+
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              This Privacy Policy explains how Flydealhub collects, uses, stores, and protects your
+              personal information when you visit or use our website and services.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Content Section */}
-      <div className="bg-gray-50 py-10">
-        <div className="max-w-6xl mx-auto px-6 leading-relaxed text-gray-700">
-          <p className="mb-4 text-center text-lg font-semibold">Privacy Policy of Flydealhub.com</p>
-
-          <p className="mb-4 text-center text-sm text-gray-600">Effective Date: 20 Aug 2025</p>
-
-          <p className="mb-4">
-            Welcome to Flydealhub.com. Your privacy is important to us, and we are committed to
-            protecting your personal information. This Privacy Policy outlines how we collect, use,
-            disclose, and safeguard your information when you visit our website and utilize our
-            services. By accessing our site and services, you consent to the practices described in
-            this policy.
-          </p>
-
-          <p className="mb-4">
-            We are part of the travel industry and recognize the importance of protecting the
-            privacy and confidentiality of our customers' information.
-          </p>
-
-          <p className="mb-4">
-            Our organization strives to meet our customers' needs. To provide customers with a
-            better user experience, we collect personal and other information. The information we
-            gather helps us customize travel services and improve our overall customer experience.
-          </p>
-
-          {/* Section 1 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            1. Information We Collect
-          </h2>
-
-          <p className="mb-4">
-            We may collect the following types of information from you when you interact with our
-            website:
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.1 Personal Information
-          </h3>
-
-          <p className="mb-4">The following is the information we collect from our customers.</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Full Name</li>
-            <li>Age</li>
-            <li>Gender</li>
-            <li>Birthday, etc.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.2 Contact Details
-          </h3>
-
-          <p className="mb-4">The customer's contact information includes:</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Customer's Phone Number</li>
-            <li>Customer's Postal Address</li>
-            <li>Customer's Email ID</li>
-            <li>Customer's correspondence contact details such as phone number or email ID</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.3 Travel Data
-          </h3>
-
-          <p className="mb-4">The customer's travel information may include:</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Flying Details</li>
-            <li>Passport Number</li>
-            <li>Travel Itinerary</li>
-            <li>Country of Citizenship</li>
-            <li>Preferred Airlines</li>
-            <li>Travel Data and related information</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.4 Account Information
-          </h3>
-
-          <p className="mb-4">
-            The customer's account information may include login credentials, username, password,
-            account settings, and related information.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.5 Billing Information
-          </h3>
-
-          <p className="mb-4">The billing information may include:</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Customer's Credit or Debit Card Details</li>
-            <li>Customer's Bank Account Details</li>
-            <li>Customer's Billing Address</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.6 Personal Preferences
-          </h3>
-
-          <p className="mb-4">
-            Personal preferences help us customize travel experiences for each customer. We may
-            collect the following information:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Travel Preferences</li>
-            <li>Meal Preferences</li>
-            <li>Accommodation Preferences</li>
-            <li>Travel Itineraries</li>
-            <li>Seating Preferences</li>
-            <li>Communication Preferences and related information</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.6.1 Customer's Contacts
-          </h3>
-
-          <p className="mb-4">
-            When a customer accesses our website through a mobile device or laptop, they may permit
-            our website to collect contact details to assist with travel communication and itinerary
-            information. This may allow access to the customer's phonebook when permission is
-            provided.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.6.2 Customer's Reviews Data
-          </h3>
-
-          <p className="mb-4">
-            We may also collect information from customer reviews associated with the same username.
-            This helps us understand customer choices, preferences, likes, and dislikes and improve
-            our services.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            1.6.3 Customer's Content Data
-          </h3>
-
-          <p className="mb-4">
-            We may also collect customer content such as travel recommendations, destination
-            recommendations, photographs, videos, and survey responses. This information helps us
-            provide more personalized services.
-          </p>
-
-          {/* Section 2 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            2. Customer Information
-          </h2>
-
-          <p className="mb-4">Flydealhub.com uses your information in the following ways:</p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            2.1 How do we collect Customer Information?
-          </h3>
-
-          <p className="mb-4">We collect customer information from various sources, such as:</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Through Customer Service Portals</li>
-            <li>Through Direct Communications</li>
-            <li>Through Third-party Services or Websites</li>
-            <li>Through Surveys</li>
-            <li>Through Automatic Data Technologies</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            2.2 How do we use Customer Information?
-          </h3>
-
-          <p className="mb-4">
-            We respect the privacy of our customers and do not share customer data with unknown or
-            unauthorized sources without appropriate permission. However, we may use customer data
-            for legitimate marketing, operational, and business purposes.
-          </p>
-
-          <p className="mb-4">The following are different ways we use customer data:</p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>For Travel Services</li>
-            <li>For Trips and Package Services</li>
-            <li>For Customer Authentication Purposes</li>
-            <li>For Communication Purposes</li>
-            <li>For Processing Travel Requests and Itineraries</li>
-            <li>For Marketing Communications</li>
-            <li>For Customizing and Personalizing Customer Experiences</li>
-            <li>For various Promotional Events such as contests, lucky draws, or rewards</li>
-            <li>For Payment and Billing Purposes</li>
-            <li>For Encryption and Protection</li>
-          </ul>
-
-          {/* Section 3 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            3. Sharing Your Information
-          </h2>
-
-          <p className="mb-4">
-            We understand the importance of your privacy and will not sell or rent your personal
-            information to third parties. However, we may share your information in the following
-            circumstances:
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            3.1 Service Providers
-          </h3>
-
-          <p className="mb-4">
-            We may share your information with trusted third-party service providers who assist us
-            in delivering our services, such as:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>Airlines</li>
-            <li>Hotels</li>
-            <li>Car rental agencies</li>
-            <li>Payment processors</li>
-          </ul>
-
-          <p className="mb-4">
-            These third parties agree to protect your information and only use it for the purposes
-            we specify.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            3.2 Legal Compliance
-          </h3>
-
-          <p className="mb-4">
-            We may disclose your information if required to do so by law or in response to valid
-            requests by public authorities. This includes:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>To comply with legal obligations</li>
-            <li>To protect and defend our rights</li>
-            <li>To prevent fraud or investigate potential breaches of our policies</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            3.3 Business Transfers
-          </h3>
-
-          <p className="mb-4">
-            In the event of a merger, acquisition, or sale of all or a portion of our assets, your
-            information may be transferred as part of that business transaction. We will notify you
-            via email and/or a prominent notice on our website regarding any update in ownership or
-            use of your personal information.
-          </p>
-
-          {/* Section 4 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            4. Data Security
-          </h2>
-
-          <p className="mb-4">
-            We take data security seriously and employ various measures to protect your personal
-            information from unauthorized access, disclosure, alteration, or destruction. Our
-            website uses SSL encryption technology to help protect your data. However, please
-            understand that no method of transmission over the Internet or method of electronic
-            storage is 100% secure.
-          </p>
-
-          {/* Section 5 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            5. Your Rights
-          </h2>
-
-          <p className="mb-4">
-            Depending on your location, you may have certain rights regarding your personal
-            information, including:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>The right to access your personal data</li>
-            <li>The right to correct inaccurate information</li>
-            <li>The right to request the deletion of your personal data</li>
-            <li>The right to restrict or object to our processing of your data</li>
-          </ul>
-
-          <p className="mb-4">
-            To exercise these rights, please contact us using the contact information provided
-            below.
-          </p>
-
-          {/* Section 6 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            6. Cookies and Tracking Technologies
-          </h2>
-
-          <p className="mb-4">
-            Our website may use cookies and similar tracking technologies to enhance your
-            experience. Cookies are small files stored on your device that help us understand how
-            you interact with our website. You can choose to accept or decline cookies, but this may
-            prevent you from taking full advantage of our site.
-          </p>
-
-          {/* Section 7 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            7. CCPA Privacy Rights (Do Not Sell My Personal Information)
-          </h2>
-
-          <p className="mb-4">
-            Under the CCPA, among other rights, California consumers have the right to:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              Request that a business that collects a consumer's personal data disclose the
-              categories and specific pieces of personal data that a business has collected about
-              consumers.
-            </li>
-
-            <li>
-              Request that a business delete any personal data about the consumer that a business
-              has collected.
-            </li>
-
-            <li>
-              Request that a business that sells a consumer's personal data not sell the consumer's
-              personal data.
-            </li>
-          </ul>
-
-          <p className="mb-4">
-            If you make a request, we have one month to respond to you. If you would like to
-            exercise any of these rights, please contact us.
-          </p>
-
-          {/* Section 8 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            8. Third-Party Links
-          </h2>
-
-          <p className="mb-4">
-            Our website may contain links to third-party sites that are not operated by us. We are
-            not responsible for the privacy practices of these websites and encourage you to review
-            their privacy policies before providing any personal information.
-          </p>
-
-          {/* Section 9 */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            9. Privacy Policy Updates
-          </h2>
-
-          <p className="mb-4">
-            We may update this Privacy Policy from time to time. Any policy updates will become
-            effective upon posting the revised policy on our website. We encourage you to review
-            this policy periodically for the latest information. Your continued use of our website
-            after an update constitutes your acceptance of the new terms.
-          </p>
-
-          <p className="mb-8">
-            Thank you for choosing Flydealhub.com. We value your trust and are committed to
-            protecting your privacy while providing exceptional travel experiences.
-          </p>
+      {/* Policy Content */}
+      <section className="max-w-5xl mx-auto px-6 py-14 md:py-20">
+        <div className="max-w-3xl space-y-12">
+          {/* 01 */}
+          <section>
+            <SectionTitle number="01" title="About This Policy" />
+
+            <p className="text-slate-600 leading-7">
+              This Privacy Policy explains how Flydealhub collects, uses, stores, and protects your
+              personal information when you visit or use our website and services.
+            </p>
+          </section>
+
+          {/* 02 */}
+          <section>
+            <SectionTitle number="02" title="Information You Provide" />
+
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                If you contact us, we may receive the information you choose to provide, such as
+                your name, email address, phone number, message, and details relevant to your
+                inquiry.
+              </p>
+
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
+                <div className="flex gap-3">
+                  <FiInfo className="mt-1 flex-shrink-0 text-amber-600" />
+
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Important</h3>
+
+                    <p className="text-sm leading-6 text-slate-600">
+                      Please do not submit passwords, payment-card information, government
+                      identification numbers, or other sensitive information through a general
+                      inquiry form.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 03 */}
+          <section>
+            <SectionTitle number="03" title="Information Collected Automatically" />
+
+            <p className="text-slate-600 leading-7">
+              Like many websites, Flydealhub may process technical information such as browser type,
+              device information, pages visited, approximate usage timestamps, referring pages, and
+              basic diagnostic logs.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              Whether this information is collected depends on the hosting, security, analytics, and
+              other tools enabled on the website.
+            </p>
+          </section>
+
+          {/* 04 */}
+          <section>
+            <SectionTitle number="04" title="How Information May Be Used" />
+
+            <p className="text-slate-600 leading-7 mb-5">
+              Information may be used, where applicable, to:
+            </p>
+
+            <ul className="space-y-3">
+              {[
+                'Respond to inquiries and provide requested information.',
+                'Operate, maintain, troubleshoot, and secure the website.',
+                'Understand website usage and improve content and usability.',
+                'Detect abuse, spam, fraud, or technical problems.',
+                'Meet applicable legal obligations and protect legitimate rights.',
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3 text-slate-600 leading-7">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-600 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-5 text-slate-600 leading-7">
+              We retain and use information only for purposes relevant to the actual operation of
+              the website and permitted by applicable law.
+            </p>
+          </section>
+
+          {/* 05 */}
+          <section>
+            <SectionTitle number="05" title="Cookies and Similar Technologies" />
+
+            <p className="text-slate-600 leading-7">
+              The website or its service providers may use cookies or similar technologies for
+              essential functions, preferences, analytics, or advertising if those features are
+              enabled.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              You can manage cookies through your browser settings, although disabling some cookies
+              may affect website functionality.
+            </p>
+          </section>
+
+          {/* 06 */}
+          <section>
+            <SectionTitle number="06" title="Sharing Information" />
+
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                Information may be shared with service providers that help operate the website, such
+                as hosting, security, email, analytics, or customer-support providers, when those
+                providers are used and access is necessary for their work.
+              </p>
+
+              <p>
+                Information may also be disclosed where required by law or when reasonably necessary
+                to protect rights, safety, or the integrity of the website.
+              </p>
+
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-sm leading-6 text-slate-600">
+                  Our privacy disclosures should reflect the actual third-party analytics,
+                  advertising, payment, or communications providers used on the website.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* 07 */}
+          <section>
+            <SectionTitle number="07" title="Data Retention and Security" />
+
+            <p className="text-slate-600 leading-7">
+              Information is retained only for as long as reasonably necessary for the purpose for
+              which it was collected, unless a longer period is required or permitted by law.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              Appropriate technical and organizational safeguards are used, but no internet
+              transmission or storage system can be guaranteed to be completely secure.
+            </p>
+          </section>
+
+          {/* 08 */}
+          <section>
+            <SectionTitle number="08" title="Your Choices and Rights" />
+
+            <p className="text-slate-600 leading-7">
+              Depending on your location and applicable law, you may have rights to request access
+              to, correction of, deletion of, or restrictions on certain personal information.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              You may also be able to object to certain processing or withdraw consent where
+              processing is based on consent.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              Contact us to make a request. We may need to verify it and may be unable to fulfil
+              requests where a legal exception applies.
+            </p>
+          </section>
+
+          {/* 09 */}
+          <section>
+            <SectionTitle number="09" title="Children's Privacy" />
+
+            <p className="text-slate-600 leading-7">
+              This website is not intended to knowingly collect personal information from children
+              in violation of applicable law.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              If you believe a child has provided personal information inappropriately, contact us
+              so the matter can be reviewed.
+            </p>
+          </section>
+
+          {/* 10 */}
+          <section>
+            <SectionTitle number="10" title="Third-Party Websites" />
+
+            <p className="text-slate-600 leading-7">
+              Links to third-party websites are provided for convenience or information. Their
+              privacy practices are governed by their own policies, which we encourage you to review
+              before submitting information to them.
+            </p>
+          </section>
+
+          {/* 11 */}
+          <section>
+            <SectionTitle number="11" title="Changes to This Policy" />
+
+            <p className="text-slate-600 leading-7">
+              We may update this Privacy Policy when our website, practices, or legal obligations
+              change.
+            </p>
+
+            <p className="mt-4 text-slate-600 leading-7">
+              The updated version will be posted on this page with a revised date. Changes apply
+              from the date stated in the updated policy, subject to applicable law.
+            </p>
+          </section>
+
+          {/* Contact */}
+          <section className="border-t border-slate-200 pt-10">
+            <div className="rounded-2xl bg-slate-900 p-7 md:p-8 text-white">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white/10">
+                  <FiMail size={20} />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold">Privacy Questions?</h2>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                    If you have questions about this Privacy Policy or would like to make a
+                    privacy-related request, please contact us through our Contact Us page.
+                  </p>
+
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 mt-5 text-sm font-medium text-white hover:text-blue-300 transition-colors"
+                  >
+                    Contact Us
+                    <span>→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

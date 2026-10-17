@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiPhoneCall, FiMail, FiMapPin, FiArrowUp } from 'react-icons/fi';
+import { FiPhoneCall, FiMail, FiMapPin, FiArrowUp, FiBriefcase } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import c from '../assets/card-icon.png';
 import i from '../assets/i.png';
@@ -24,7 +24,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-b from-black via-gray-900 to-black text-gray-300 pt-14 relative border-t border-gray-700">
-      {/* Independent Travel Agency Notice */}
+      {/* =========================================================
+          INDEPENDENT TRAVEL AGENCY NOTICE
+      ========================================================= */}
+
       <div className="max-w-7xl mx-auto px-6 mb-10">
         <div className="bg-blue-600/10 border border-blue-500/30 rounded-lg px-5 py-3 text-center">
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
@@ -35,8 +38,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Brand Info */}
+      {/* =========================================================
+          MAIN FOOTER
+      ========================================================= */}
+
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* =====================================================
+            BRAND INFO
+        ===================================================== */}
+
         <div>
           <h2 className="text-2xl font-extrabold text-white tracking-wide">
             Fly <span className="text-blue-500">Deal</span> Hub
@@ -49,13 +59,15 @@ const Footer = () => {
           </p>
 
           <p className="mt-4 text-sm text-gray-400">
-            <span className="font-semibold text-white">
-              Address: 523/5 Khalsa College Rd, Yamunanagar, Haryana
-            </span>
+            <span className="font-semibold text-white">Address:</span> 523/5 Khalsa College Rd,
+            Yamunanagar, Haryana
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* =====================================================
+            QUICK LINKS
+        ===================================================== */}
+
         <div>
           <h3 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">
             Quick Links
@@ -79,22 +91,13 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
-
-            <li>
-              <Link to="/taxes.html" className="hover:text-blue-500 transition">
-                Tax & Fees
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/services.html" className="hover:text-blue-500 transition">
-                Our Services
-              </Link>
-            </li>
           </ul>
         </div>
 
-        {/* Legal */}
+        {/* =====================================================
+            LEGAL
+        ===================================================== */}
+
         <div>
           <h3 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">
             Legal
@@ -119,15 +122,13 @@ const Footer = () => {
               </Link>
             </li>
 
-            <li>
-              <Link to="/disclaimer.html" className="hover:text-blue-500 transition">
-                Disclaimer
-              </Link>
-            </li>
           </ul>
         </div>
 
-        {/* Newsletter */}
+        {/* =====================================================
+            NEWSLETTER
+        ===================================================== */}
+
         <div>
           <h3 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">
             Newsletter
@@ -151,8 +152,77 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Contact Info */}
-      <div className="mt-12 border-t border-gray-800 pt-6">
+      {/* =========================================================
+          COMPANY INFORMATION
+      ========================================================= */}
+
+      <div className="max-w-7xl mx-auto px-6 mt-12">
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
+              <FiBriefcase className="text-blue-500 text-lg" />
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-white">Company Information</h3>
+
+              <p className="text-xs text-gray-500 mt-1">
+                Business identification and registration details
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Company Name */}
+            <div className="bg-white/5 border border-gray-800 rounded-lg p-4">
+              <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">Parent Company Name</p>
+
+              <p className="text-sm font-semibold text-gray-200">Air Fare Bookers Pvt Ltd</p>
+            </div>
+
+            {/* IATA Number */}
+            <div className="bg-white/5 border border-gray-800 rounded-lg p-4">
+              <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">IATA Number</p>
+
+              <p className="text-sm font-semibold text-gray-200">14003765</p>
+            </div>
+
+            {/* Registration Number */}
+            <div className="bg-white/5 border border-gray-800 rounded-lg p-4">
+              <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                Registration Number
+              </p>
+
+              <p className="text-sm font-semibold text-gray-200 break-words">
+                U63000HR2022PTC100934
+              </p>
+            </div>
+
+            {/* Registered Address */}
+            <div className="bg-white/5 border border-gray-800 rounded-lg p-4">
+              <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                Registered Address
+              </p>
+
+              <p className="text-sm font-semibold text-gray-200 leading-6">
+                523/5 Khalsa College Rd,
+                <br />
+                Yamunanagar, Haryana, India
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-5 text-xs text-gray-500 leading-relaxed">
+            The above information is provided for business identification and transparency purposes.
+          </p>
+        </div>
+      </div>
+
+      {/* =========================================================
+          CONTACT INFO
+      ========================================================= */}
+
+      <div className="mt-10 border-t border-gray-800 pt-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left - Logo */}
           <div className="flex items-center gap-3">
@@ -164,12 +234,12 @@ const Footer = () => {
           {/* Center - Contact Info */}
           <div className="flex flex-col md:flex-row gap-8 justify-center text-sm">
             <p className="flex items-center justify-center gap-2">
-              <FiPhoneCall />
+              <FiPhoneCall className="text-blue-500" />
               (888) 789-8629
             </p>
 
             <p className="flex items-center justify-center gap-2">
-              <FiMail />
+              <FiMail className="text-blue-500" />
               support@flydealhub.com
             </p>
           </div>
@@ -181,7 +251,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Detailed Disclaimer */}
+        {/* =====================================================
+            DETAILED DISCLAIMER
+        ===================================================== */}
+
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs py-6 leading-relaxed text-center md:text-left text-gray-400">
             <strong className="text-white">Disclaimer:</strong> Flydealhub is an independent travel
@@ -206,7 +279,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Back To Top */}
+      {/* =========================================================
+          BACK TO TOP
+      ========================================================= */}
+
       {showTop && (
         <button
           onClick={scrollToTop}

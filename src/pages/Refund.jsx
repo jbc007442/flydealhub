@@ -1,312 +1,224 @@
 import React from 'react';
+import { FiArrowLeft, FiInfo, FiMail, FiShield } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
-const Refund = () => {
+const SectionTitle = ({ number, title }) => (
+  <div className="flex items-start gap-4 mb-4">
+    <span className="flex-shrink-0 text-sm font-semibold text-blue-600">{number}</span>
+
+    <h2 className="text-xl md:text-2xl font-semibold text-slate-900">{title}</h2>
+  </div>
+);
+
+const RefundPolicy = () => {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-gray-400 py-16 text-white text-center shadow-md">
-        <h1 className="text-4xl font-bold">Refund Policy</h1>
-        <div className="w-24 h-1 bg-white mx-auto mt-3"></div>
-        <p className="mt-4 text-lg opacity-90">
-          Please review our refund rules and applicable travel policies.
-        </p>
+    <main className="min-h-screen bg-white text-slate-800">
+      {/* Hero */}
+      <section className="border-b border-slate-200 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-blue-600 transition-colors mb-8"
+          >
+            <FiArrowLeft />
+            Back to Home
+          </Link>
+
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <FiShield size={20} />
+              </div>
+
+              <span className="text-sm font-medium text-blue-600">Flydealhub Policies</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-950">
+              Refund Policy
+            </h1>
+
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              Please review the information below to understand refund eligibility, applicable
+              terms, and the procedures for submitting a refund-related request.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Content Section */}
-      <div className="bg-gray-50 py-10">
-        <div className="max-w-6xl mx-auto px-6 leading-relaxed text-gray-700">
-          <h2 className="text-2xl font-semibold mt-8 mb-3 border-l-4 pl-3 border-gray-600">
-            Refund and Travel Policy
-          </h2>
+      {/* Content */}
+      <section className="max-w-5xl mx-auto px-6 py-14 md:py-20">
+        <div className="max-w-3xl space-y-12">
+          {/* 01 */}
+          <section>
+            <SectionTitle number="01" title="Important Information" />
 
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            Travel Policy
-          </h3>
+            <p className="text-slate-600 leading-7">
+              Refund eligibility depends on the specific product or service purchased, the terms
+              disclosed at the time of purchase, the relevant provider's rules, and applicable law.
+            </p>
+          </section>
 
-          <h4 className="text-lg font-semibold mt-4 mb-2">1. Flight Refunds</h4>
+          {/* 02 */}
+          <section>
+            <SectionTitle number="02" title="Airline Tickets and Third-Party Travel Arrangements" />
 
-          <p className="mb-4">
-            For assistance regarding a flight already purchased through Flydealhub, contact our
-            customer service department at (888) 789-8629.
-          </p>
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                If a travel arrangement is made directly with an airline or another travel provider,
+                that provider's applicable terms and refund procedures generally apply.
+              </p>
 
-          <p className="mb-4">
-            Here are some important points to keep in mind when requesting assistance with a flight:
-          </p>
+              <p>
+                Contact the provider or the seller identified in your travel confirmation to
+                determine who is responsible for processing your refund.
+              </p>
 
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              Generally, you may be eligible for a full refund when a flight purchased through
-              YourTripcharge is withdrawn within 24 hours, subject to applicable airline rules.
-            </li>
+              <p>
+                Flydealhub cannot guarantee a refund for a transaction that it did not sell or
+                process. Refund eligibility and approval depend on the responsible seller, provider,
+                and applicable terms.
+              </p>
+            </div>
+          </section>
 
-            <li>
-              Adjusting a flight itinerary may result in fees from the airline. Other rules or
-              restrictions may also apply, such as purchasing a new flight for the same primary
-              passenger on the same airline and paying any difference in ticket cost.
-            </li>
+          {/* 03 */}
+          <section>
+            <SectionTitle number="03" title="Services Purchased Directly from Flydealhub" />
 
-            <li>
-              Certain flights are not eligible for refunds. Please review the rules and restrictions
-              included with your itinerary.
-            </li>
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                For services purchased directly from Flydealhub, refund eligibility depends on the
+                specific service, the terms disclosed before payment, and applicable law.
+              </p>
 
-            <li>
-              Even when a flight is not eligible for a monetary refund, you may be able to receive
-              airline credit for future travel, depending on the carrier's policies.
-            </li>
+              <p>
+                Any applicable service fees, deductions, or refund conditions will be determined
+                according to the terms applicable to the transaction.
+              </p>
+            </div>
+          </section>
 
-            <li>
-              Some smaller airlines require customers to contact them directly regarding travel
-              credits or refund requests.
-            </li>
+          {/* 04 */}
+          <section>
+            <SectionTitle number="04" title="How to Submit a Refund Request" />
 
-            <li>
-              The applicable refund arrangements are determined by the airfare rules and policies of
-              each carrier available through our travel site. Flydealhub cannot control airline
-              policies or procedures, and the applicable refund amount is determined by the airline.
-            </li>
-          </ul>
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                To inquire about a refund, contact our support team using the details provided on
+                the Contact Us page.
+              </p>
 
-          <h4 className="text-lg font-semibold mt-4 mb-2">2. Hotel Refunds</h4>
+              <p>
+                Please include the transaction reference, the email address associated with the
+                transaction, and a brief description of your request.
+              </p>
 
-          <p className="mb-4">
-            You may contact our customer service department at (888) 789-8629 or contact the hotel
-            directly. If you need more information, please review the applicable hotel travel terms.
-          </p>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                <div className="flex gap-3">
+                  <FiInfo className="mt-1 flex-shrink-0 text-blue-600" />
 
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              In most cases, eligibility for a hotel room refund depends on the hotel's rules and
-              restrictions, both generally and for your specific room or room type. These details
-              can be found in your itinerary.
-            </li>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Security Reminder</h3>
 
-            <li>
-              "Unpublished Rate" hotel rooms may have restrictions that do not allow itinerary
-              adjustments or monetary refunds.
-            </li>
+                    <p className="text-sm leading-6 text-slate-600">
+                      For your security, do not share complete payment-card details, passwords,
+                      PINs, or one-time security codes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-            <li>
-              Although YourTripcharge may not charge you for certain itinerary adjustments, the
-              hotel itself may apply fees according to its own rules and restrictions. For example,
-              many hotels may charge a fee when travel details are adjusted within 48 hours of
-              check-in.
-            </li>
+          {/* 05 */}
+          <section>
+            <SectionTitle number="05" title="Refund Review and Processing" />
 
-            <li>
-              Certain hotel details, including room type, number of guests, and check-in or
-              check-out dates, may result in additional fees when adjusted.
-            </li>
+            <p className="text-slate-600 leading-7">
+              Refund requests are reviewed by the responsible seller or service provider according
+              to the applicable terms and legal requirements.
+            </p>
 
-            <li>
-              If an adjustment is not available for a hotel room, you may need to request a refund
-              and purchase another available room.
-            </li>
-          </ul>
+            <p className="mt-4 text-slate-600 leading-7">
+              Where a refund is approved, the amount and processing time may depend on the payment
+              provider, bank, original payment method, and applicable procedures.
+            </p>
+          </section>
 
-          <h4 className="text-lg font-semibold mt-4 mb-2">3. Rental Car Refunds</h4>
+          {/* 06 */}
+          <section>
+            <SectionTitle number="06" title="Duplicate or Incorrect Charges" />
 
-          <p className="mb-4">
-            You may contact Flydealhub customer service at (888) 789-8629, or contact the rental
-            car company directly. When requesting a refund for a rental car, keep the following
-            points in mind:
-          </p>
+            <div className="space-y-4 text-slate-600 leading-7">
+              <p>
+                If you believe you have been charged incorrectly or charged more than once, contact
+                the seller or payment provider identified on your receipt.
+              </p>
 
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              Many rental car purchases may qualify for a refund without a penalty, depending on the
-              rental company's policy.
-            </li>
+              <p>
+                Provide the transaction reference and a description of the issue to help the
+                responsible team investigate.
+              </p>
 
-            <li>
-              Some rental car purchases cannot be adjusted after purchase. You may need to request a
-              refund and purchase a new rental option.
-            </li>
-          </ul>
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
+                <div className="flex gap-3">
+                  <FiShield className="mt-1 flex-shrink-0 text-amber-600" />
 
-          <h4 className="text-lg font-semibold mt-4 mb-2">4. Cruise Refunds</h4>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Payment Security</h3>
 
-          <p className="mb-4">
-            Cruise lines often have more detailed refund and travel policies because of their
-            package structure. Here is a general overview:
-          </p>
+                    <p className="text-sm leading-6 text-slate-600">
+                      Never share your complete card number, PIN, password, or one-time security
+                      code when reporting a payment issue.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              Early Travel Benefits: Many cruise lines offer flexible travel policies when purchased
-              early, allowing eligible customers to receive a full or partial refund according to
-              the cruise line's terms.
-            </li>
+          {/* 07 */}
+          <section>
+            <SectionTitle number="07" title="Legal Rights" />
 
-            <li>
-              Final Payment and Fees: Most cruises require final payment several months before
-              departure. If a refund is requested after this payment, applicable fees may be
-              deducted according to the cruise line's policy.
-            </li>
+            <p className="text-slate-600 leading-7">
+              Nothing in this policy is intended to limit any mandatory consumer rights or remedies
+              available under applicable law. Where this policy conflicts with a non-waivable legal
+              right, the applicable legal requirement takes precedence.
+            </p>
+          </section>
 
-            <li>
-              Travel Insurance: Similar to flights and hotels, purchasing travel insurance can help
-              protect against eligible travel losses and unexpected itinerary issues.
-            </li>
+          {/* Contact */}
+          <section className="border-t border-slate-200 pt-10">
+            <div className="rounded-2xl bg-slate-900 p-7 md:p-8 text-white">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white/10">
+                  <FiMail size={20} />
+                </div>
 
-            <li>
-              Cruise Line Policies: Each cruise line has its own policies, so it is important to
-              review the specific terms of your selected cruise before completing your purchase.
-            </li>
-          </ul>
+                <div>
+                  <h2 className="text-xl font-semibold">Need Assistance?</h2>
 
-          <h4 className="text-lg font-semibold mt-4 mb-2">5. Vacation Package Refunds</h4>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                    For refund-related questions or assistance, please contact the appropriate
+                    support team using the contact details provided on the Contact Us page.
+                  </p>
 
-          <p className="mb-4">
-            For assistance with a vacation package, contact the customer service department directly
-            at (888) 789-8629. For individual parts of your vacation package, please review the
-            applicable sections above.
-          </p>
-
-          <p className="mb-4">
-            If you are requesting a refund for a package, keep these points in mind:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2 mb-4">
-            <li>
-              Although Flydealhub may not charge you directly for certain hotel, rental car, or
-              activity refund requests within a vacation package, the companies providing these
-              services may apply fees according to their individual rules and restrictions. These
-              fees may be applied on an individual service basis.
-            </li>
-
-            <li>
-              Although you may not be charged directly for certain flight itinerary adjustments
-              within a vacation package, the airline may apply applicable fees. Airline credit
-              received from a non-refundable flight may have additional restrictions when used
-              toward another flight for the same primary passenger and airline.
-            </li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            REFUND POLICY
-          </h3>
-
-          <p className="mb-4">
-            If the tour or any part thereof cannot be conducted due to Force Majeure or Vis Majeure,
-            the Company shall not be responsible for providing any refund to you.
-          </p>
-
-          <p className="mb-4">
-            If the tour or any part thereof cannot be conducted due to Force Majeure or Vis Majeure,
-            the Company shall not be responsible for providing any refund to you. However, at its
-            sole discretion, the Company may provide a refund based on various factors such as the
-            number of participants and the policies of suppliers including hoteliers, coach
-            operators, and other service providers. The decision of the Company regarding the refund
-            amount shall be final.
-          </p>
-
-          <p className="mb-4">It may take at least 15 to 45 days to process an eligible refund.</p>
-
-          <p className="mb-4">
-            It is clearly understood that there shall be no refund whatsoever if the Client does not
-            or cannot utilize any of the services such as hotels, sightseeing, rides, cruises,
-            meals, entrance fees, optional tours, etc., due to any reason whatsoever.
-          </p>
-
-          <p className="mb-4">
-            Refunds, if applicable, for itinerary amendments and related service requests will be
-            paid directly to the Client. For purchases made directly with the Company by credit
-            card, the applicable amount may be reversed to the credit card account at the discretion
-            of the Company. Processing may take up to 45 days.
-          </p>
-
-          <p className="mb-4">
-            There is no refund payable for any unused services, including meals, entrance fees,
-            optional tours, hotels, transportation, and sightseeing, for any reason whatsoever.
-          </p>
-
-          <p className="mb-4">
-            For any service purchased in advance, the applicable refund will be processed according
-            to the relevant service policy. Refunds may be issued through the original payment
-            method or by check after deducting applicable service fees and actual bank charges, if
-            any. Processing may take 15 to 45 days to reflect in the customer's account.
-          </p>
-
-          <p className="mb-4">
-            Clients may have the option to keep eligible refund funds in our account, collect a
-            credit certificate, and utilize the same within 24 months.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2 border-l-4 pl-3 border-gray-500">
-            CONDITIONS OF TRAVEL
-          </h3>
-
-          <p className="mb-4">
-            The client will have to strictly follow the Tour Program. There shall be no refund if
-            the client fails to join the group at the commencement of the tour, joins the group
-            later, or leaves the group before the tour ends. It shall be the responsibility of the
-            client to reach the place of commencement of the tour and register with the
-            representative of the company at the appointed place, date, and time.
-          </p>
-
-          <p className="mb-4">
-            In the case where a client along with his family is compelled to discontinue the tour
-            due to any reason whatsoever including illness, death, or loss of travel documents, no
-            claim shall be entertained for a refund of unused services. Even if a client is unable
-            to reach the place of commencement of the tour due to any reason whatsoever including
-            loss of baggage or travel documents, the purchase shall be treated as a "no show" on the
-            tour and applicable charges will be levied.
-          </p>
-
-          <p className="mb-4">
-            If a client avails pre-tour services or part thereof, or the air tickets under any
-            offer, but fails to join the group for the main tour at the appointed place, or ends
-            participation in the tour after using the air tickets or pre-tour arrangements, it shall
-            be treated as a "no show" and there will be no refund whatsoever for unused pre-tour or
-            main tour services.
-          </p>
-
-          <p className="mb-4">
-            Flydealhub reserves the right to withdraw the tour membership of any client whose
-            behaviour is deemed likely to affect the smooth operation of the tour or adversely
-            affect the enjoyment or safety of other passengers, and the Company shall be under no
-            liability to any such person.
-          </p>
-
-          <p className="mb-4">
-            The immunities provided under this contract shall be available to Flydealhub's
-            employees, directors, and managers, including Employees and Agents, but not to the
-            Independent Contractors selected by the company.
-          </p>
-
-          <p className="mb-4">
-            Each of these conditions shall be severable from the other and if any provision is
-            invalid, illegal, or unenforceable, the remaining provisions shall nevertheless have
-            full force and effect. No liability on the part of Flydealhub arising in any way out of
-            the Contract in respect of any tour, holiday, or excursion facilities shall exceed the
-            total amount paid or agreed to be paid for the tour holiday, and shall in no case
-            include any consequential, incidental loss, or additional expense whatsoever.
-          </p>
-
-          <p className="mb-4">
-            Special/high season charges levied by suppliers may increase airline or rail charges
-            before the date of departure. The Client must pay for all such increases in price in
-            full before departure.
-          </p>
-
-          <p className="mb-4">
-            If no suit/action is brought against Flydealhub within 7 days of the last day of the
-            tour, Flydealhub shall be discharged from all liabilities under or arising out of this
-            contract, and the client shall be deemed to have relinquished or abandoned all rights
-            under or arising from this contract.
-          </p>
-
-          <p className="mb-4">
-            In case of publication of any travel scheme offering any discount or benefit by
-            Flydealhub, we shall have the sole right to withdraw such a scheme or discount at any
-            time unless a specific assurance to the contrary is published.
-          </p>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 mt-5 text-sm font-medium text-white hover:text-blue-300 transition-colors"
+                  >
+                    Contact Us
+                    <span>→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
-export default Refund;
+export default RefundPolicy;
