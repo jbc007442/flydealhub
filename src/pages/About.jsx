@@ -229,14 +229,14 @@ const About = () => {
                 <div className="bg-white rounded-lg p-4 border border-blue-100">
                   <p className="text-sm text-gray-500 mb-1">IATA Number</p>
 
-                  <p className="font-semibold text-gray-800">12345678</p>
+                  <p className="font-semibold text-gray-800">14003765</p>
                 </div>
 
                 {/* Registration Number */}
                 <div className="bg-white rounded-lg p-4 border border-blue-100">
                   <p className="text-sm text-gray-500 mb-1">Company Registration Number</p>
 
-                  <p className="font-semibold text-gray-800">U63040DL2020PTC123456</p>
+                  <p className="font-semibold text-gray-800">U63000HR2022PTC100934</p>
                 </div>
 
                 {/* Registered Address */}
